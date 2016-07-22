@@ -1,0 +1,2278 @@
+target set <value>
+target show
+schedule uar-report user <value> user-group <value> skip-detailed-browsing <yes|no> title <value> period <value> start-time <value> end-time <value> vsys <value>
+schedule botnet-report period <last-calendar-day|last-24-hrs> topn <1-500> query <value>
+clear arp <value>|<all>
+clear neighbor <value>|<all>
+clear mac <value>|<all>
+clear job id <0-4294967295>
+clear query id <0-4294967295>
+clear query all-by-session
+clear report id <0-4294967295>
+clear report all-by-session
+clear log traffic
+clear log threat
+clear log config
+clear log system
+clear log alarm
+clear log acc
+clear log hipmatch
+clear log userid
+clear log iptag
+clear wildfire counters
+clear counter interface
+clear counter global name <value>
+clear counter global filter category <value> severity <value> aspect <value> packet-filter <yes|no>
+clear counter all
+clear session id <1-2147483648>
+clear session all filter nat <none|source|destination|both> ssl-decrypt <yes|no> type <flow|predict> state <initial|opening|active|discard|closing|closed> from <value> to <value> source <ip/netmask> destination <ip/netmask> source-user <value> destination-user <value> source-port <1-65535> destination-port <1-65535> protocol <1-255> application <value> rule <value> nat-rule <value> qos-rule <value> pbf-rule <value> dos-rule <value> hw-interface <value> min-kb <1-1048576> qos-node-id <0-5000>|<-2> qos-class <1-8> vsys-name <value>|<any>
+clear application-signature statistics
+clear nat-rule-cache rule <value>
+clear statistics
+clear high-availability control-link statistics
+clear high-availability transitions
+clear vpn ike-sa gateway <value>
+clear vpn ipsec-sa tunnel <value>
+clear vpn flow tunnel-id <1-2147483648>
+clear dhcp lease all expired-only
+clear dhcp lease interface clear dhcp lease interface <name> ip <ip/netmask>
+clear dhcp lease interface <name> mac <value>
+clear dhcp lease interface <name> expired-only
+clear routing bgp virtual-router clear routing bgp virtual-router <name> stat peer <value>
+clear routing bgp virtual-router <name> dampening peer <value> prefix <ip/netmask>
+clear routing multicast igmp statistics virtual-router <value>
+clear routing multicast pim statistics virtual-router <value>
+clear pppoe interface <value>
+clear dns-proxy statistics name <value>
+clear dns-proxy statistics all
+clear dns-proxy cache name clear dns-proxy cache all domain-name <value>
+clear pbf rule name <value>
+clear pbf rule all
+clear pbf return-mac name <value>
+clear pbf return-mac all
+clear dos-protection rule clear dos-protection rule <name> statistics
+clear dos-protection zone clear dos-protection zone <name> blocked source <ip/netmask>
+clear dos-protection zone <name> blocked all
+clear user-cache ip <ip/netmask>
+clear user-cache all
+clear user-cache-mp ip <ip/netmask>
+clear user-cache-mp all
+clear xml-api multiusersystem ip <ip/netmask>
+clear xml-api multiusersystem all
+clear uid-gids-cache uid <1-2147483647>
+clear uid-gids-cache all
+clear url-cache url <value>
+clear url-cache all
+clear appinfo2ip
+clear global-protect redirect location
+delete hip-report all logout-only <yes|no> expired-days <1-365>
+delete hip-report report user <value> ip <ip/netmask> computer <value>
+delete hip-profile-database ip <ip/netmask>
+delete hip-mdm-cache mobile-id <value>
+delete user-group-cache
+delete dynamic-url host name <value>
+delete dynamic-url host all
+delete url-database url <value>
+delete url-database all
+delete admin-sessions
+delete config-audit-history
+delete runtime-user-db
+delete user-file ssh-known-hosts user username <value>|<all> ip <ip/netmask>
+delete user-file ssh-known-hosts self
+delete report predefined scope delete report predefined scope <name> report-name delete report custom scope delete report custom scope <name> report-name delete report summary scope delete report summary scope <name> report-name
+delete policy-cache
+delete config saved <value>
+delete software image <value>
+delete software version <value>
+delete global-protect-client image <value>
+delete global-protect-client version <value>
+delete license key <value>
+delete content update <value>
+delete content cache old-content
+delete content cache curr-content version <value> type <decoder|sml|dfa|tdb|aho-regex|all>
+delete anti-virus update <value>
+delete wildfire update <value>
+delete high-availability-key
+delete logo
+delete core management-plane file <value>
+delete pcap directory <value>
+delete data-capture directory <value>
+delete unknown-pcap directory <value>
+delete debug-filter file <value>
+delete ssh-authentication-public-key
+delete sslmgr-store satellite-info portal name <value> serialno <value> state <assigned|unassigned>
+delete sslmgr-store certificate-info portal name <value> serialno <value> db-serialno <value>
+delete sslmgr-store satellite-info-revoke-certificate portal <value> serialno  [ <serialno1> <serialno2>... ]
+delete log-collector preference-list
+delete radius-user admin-name <value>
+show interface <value>|<management|hardware|logical|all>
+show virtual-wire <value>|<all>
+show vlan <value>|<all>
+show arp <value>|<all|management>
+show neighbor <value>|<all|management>
+show mac <value>|<all>
+show running url <value>
+show running url-info <value>
+show running logging
+show running url-license
+show running tcp state
+show running rule-use vsys <value> rule-base <security|nat|qos|pbf|decryption|app-override|cp|dos> type <used|unused>
+show running nat-rule-cache
+show running global-ippool
+show running nat-rule-ippool rule <value> show-cache <yes|no> show-freelist <yes|no>
+show running ippool
+show running security-policy
+show running nat-policy
+show running captive-portal-policy
+show running decryption-policy
+show running qos-policy
+show running application-override-policy
+show running pbf-policy
+show running dos-policy
+show running application-signature statistics
+show running application cache
+show running application setting
+show running application statistics
+show running resource-monitor second last <1-60>
+show running resource-monitor minute last <1-60>
+show running resource-monitor hour last <1-24>
+show running resource-monitor day last <1-7>
+show running resource-monitor week last <1-13>
+show running tunnel flow name <value>
+show running tunnel flow tunnel-id <1-65535>
+show running tunnel flow context <1-65535>
+show running tunnel flow info
+show running tunnel flow operation-stats
+show running tunnel flow lookup
+show running tunnel flow nexthop
+show running tunnel flow all filter type <ipsec|sslvpn> state <init|active|inactive>
+show running top-urls top <1-10000> category <value>
+show running url-cache statistics
+show running url-cache all
+show running ssl-cert-cn
+show running appinfo2ip
+show running ipv6 address
+show logging-status
+show management-clients
+show config-locks
+show commit-locks
+show panorama-status
+show panorama-certificates
+show chassis-ready
+show vm-monitor source state <value>|<all>
+show vm-monitor source statistics
+show vm-monitor vms ref-id <value>
+show vm-monitor vms source-name <value>
+show vm-monitor vms summary
+show user ip-user-mapping ip <ip/netmask>
+show user ip-user-mapping all option <detail|count> type <UIA|CP|NTLM|SSL/VPN|GP|XMLAPI|AD|EDIR|SYSLOG|UNKNOWN>
+show user ip-user-mapping-mp ip <ip/netmask>
+show user ip-user-mapping-mp all option <detail|count> no-group-only <yes|no> type <UIA|CP|NTLM|SSL/VPN|GP|XMLAPI|AD|EDIR|SYSLOG|UNKNOWN>
+show user ip-port-user-mapping ip <ip/netmask>
+show user ip-port-user-mapping source-user <value>
+show user ip-port-user-mapping all
+show user local-user-db vsys <value> username <value> disabled <yes|no>
+show user group name <value>
+show user group list xmlapi
+show user user-id-agent state <value>|<all>
+show user user-id-agent statistics
+show user user-id-agent config name <value>
+show user group-mapping-service query <all|local|remote>
+show user group-mapping-service status
+show user user-id-service client <value>|<all>
+show user user-id-service status
+show user ts-agent state <value>|<all>
+show user ts-agent statistics
+show user xml-api multiusersystem
+show user group-mapping state <value>|<all>
+show user group-mapping statistics
+show user group-mapping naming-context server <ip/netmask>|<value> server-port <1-65535> use-ssl <yes|no> is-active-directory <yes|no> proxy-agent <ip/netmask>|<value> proxy-agent-port <1-65535>
+show user group-selection use-ssl <yes|no> base <value> bind-dn <value> bind-password <value> name-attribute <value> group-object <value> container-object <value> filter <value> search-scope <one|subtree> proxy-agent <ip/netmask>|<value> proxy-agent-port <1-65535> force <yes|no> server  [ <server1> <server2>... ]
+show user group-selection use-ssl <yes|no> base <value> bind-dn <value> bind-password <value> name-attribute <value> group-object <value> container-object <value> filter <value> search-scope <one|subtree> proxy-agent <ip/netmask>|<value> proxy-agent-port <1-65535> force <yes|no> server-port  [ <server-port1> <server-port2>... ]
+show user user-ids match-user <value>
+show user server-monitor state <value>|<all>
+show user server-monitor statistics
+show user server-monitor auto-discover domain <value>
+show authentication allowlist
+show authentication groupdb
+show authentication groupnames
+show dhcp server lease <value>|<all>
+show dhcp server settings <value>|<all>
+show dhcp client state <value>|<vlan|all>
+show pppoe interface <value>|<all>
+show dns-proxy settings name <value>
+show dns-proxy settings all
+show dns-proxy statistics name <value>
+show dns-proxy statistics all
+show dns-proxy cache name <value>
+show dns-proxy cache all
+show dns-proxy static-entries name <value>
+show dns-proxy static-entries all
+show dos-protection rule show dos-protection rule <name> statistics
+show dos-protection rule <name> settings
+show dos-protection zone show dos-protection zone <name> blocked source
+show fips-mode
+show operational-mode
+show config saved <value>
+show config diff
+show config running xpath <value>
+show config synced
+show config synced-diff
+show config candidate
+show config pushed-shared-policy vsys <value>
+show config pushed-template
+show config merged
+show config audit version <value>
+show config audit base-version <value>
+show config audit base-version-no-deletes <value>
+show config audit info
+show clock more
+show wildfire status
+show wildfire statistics
+show wildfire disk-usage
+show wildfire cloud-info
+show cli info
+show cli idle-timeout
+show cli permissions
+show log traffic direction equal <forward|backward>
+show log traffic csv-output equal <yes|no>
+show log traffic query equal <value>
+show log traffic receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log traffic start-time equal <value>
+show log traffic end-time equal <value>
+show log traffic show-tracker equal <yes|no>
+show log traffic src in <ip/netmask>
+show log traffic src not-in <ip/netmask>
+show log traffic dst in <ip/netmask>
+show log traffic dst not-in <ip/netmask>
+show log traffic rule equal <value>
+show log traffic rule not-equal <value>
+show log traffic app equal <value>
+show log traffic app not-equal <value>
+show log traffic from equal <value>
+show log traffic from not-equal <value>
+show log traffic to equal <value>
+show log traffic to not-equal <value>
+show log traffic sport equal <1-65535>
+show log traffic sport not-equal <1-65535>
+show log traffic dport equal <1-65535>
+show log traffic dport not-equal <1-65535>
+show log traffic action equal <allow|deny|drop>
+show log traffic action not-equal <allow|deny|drop>
+show log traffic srcuser equal <value>
+show log traffic dstuser equal <value>
+show log threat suppress-threatid-mapping equal <yes|no>
+show log threat pcap-dump equal <yes|no>
+show log threat direction equal <forward|backward>
+show log threat csv-output equal <yes|no>
+show log threat query equal <value>
+show log threat receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log threat start-time equal <value>
+show log threat end-time equal <value>
+show log threat src in <ip/netmask>
+show log threat src not-in <ip/netmask>
+show log threat dst in <ip/netmask>
+show log threat dst not-in <ip/netmask>
+show log threat rule equal <value>
+show log threat rule not-equal <value>
+show log threat app equal <value>
+show log threat app not-equal <value>
+show log threat from equal <value>
+show log threat from not-equal <value>
+show log threat to equal <value>
+show log threat to not-equal <value>
+show log threat sport equal <1-65535>
+show log threat sport not-equal <1-65535>
+show log threat dport equal <1-65535>
+show log threat dport not-equal <1-65535>
+show log threat action equal <alert|allow|deny|drop|drop-all-packets|reset-client|reset-server|reset-both|block-url>
+show log threat action not-equal <alert|allow|deny|drop|drop-all-packets|reset-client|reset-server|reset-both|block-url>
+show log threat srcuser equal <value>
+show log threat dstuser equal <value>
+show log threat category equal <value>
+show log threat category not-equal <value>
+show log wildfire direction equal <forward|backward>
+show log wildfire csv-output equal <yes|no>
+show log wildfire query equal <value>
+show log wildfire receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log wildfire start-time equal <value>
+show log wildfire end-time equal <value>
+show log wildfire src in <ip/netmask>
+show log wildfire src not-in <ip/netmask>
+show log wildfire dst in <ip/netmask>
+show log wildfire dst not-in <ip/netmask>
+show log wildfire rule equal <value>
+show log wildfire rule not-equal <value>
+show log wildfire app equal <value>
+show log wildfire app not-equal <value>
+show log wildfire from equal <value>
+show log wildfire from not-equal <value>
+show log wildfire to equal <value>
+show log wildfire to not-equal <value>
+show log wildfire sport equal <1-65535>
+show log wildfire sport not-equal <1-65535>
+show log wildfire dport equal <1-65535>
+show log wildfire dport not-equal <1-65535>
+show log wildfire srcuser equal <value>
+show log wildfire dstuser equal <value>
+show log wildfire category equal <benign|malicious>
+show log wildfire category not-equal <benign|malicious>
+show log url suppress-threatid-mapping equal <yes|no>
+show log url direction equal <forward|backward>
+show log url csv-output equal <yes|no>
+show log url query equal <value>
+show log url receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log url start-time equal <value>
+show log url end-time equal <value>
+show log url src in <ip/netmask>
+show log url src not-in <ip/netmask>
+show log url dst in <ip/netmask>
+show log url dst not-in <ip/netmask>
+show log url rule equal <value>
+show log url rule not-equal <value>
+show log url app equal <value>
+show log url app not-equal <value>
+show log url from equal <value>
+show log url from not-equal <value>
+show log url to equal <value>
+show log url to not-equal <value>
+show log url sport equal <1-65535>
+show log url sport not-equal <1-65535>
+show log url dport equal <1-65535>
+show log url dport not-equal <1-65535>
+show log url action equal <alert|allow|deny|drop|drop-all-packets|reset-client|reset-server|reset-both|block-url>
+show log url action not-equal <alert|allow|deny|drop|drop-all-packets|reset-client|reset-server|reset-both|block-url>
+show log url srcuser equal <value>
+show log url dstuser equal <value>
+show log url category equal <value>
+show log url category not-equal <value>
+show log data suppress-threatid-mapping equal <yes|no>
+show log data direction equal <forward|backward>
+show log data csv-output equal <yes|no>
+show log data query equal <value>
+show log data receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log data start-time equal <value>
+show log data end-time equal <value>
+show log data src in <ip/netmask>
+show log data src not-in <ip/netmask>
+show log data dst in <ip/netmask>
+show log data dst not-in <ip/netmask>
+show log data rule equal <value>
+show log data rule not-equal <value>
+show log data app equal <value>
+show log data app not-equal <value>
+show log data from equal <value>
+show log data from not-equal <value>
+show log data to equal <value>
+show log data to not-equal <value>
+show log data sport equal <1-65535>
+show log data sport not-equal <1-65535>
+show log data dport equal <1-65535>
+show log data dport not-equal <1-65535>
+show log data action equal <alert|allow|deny|drop|drop-all-packets|reset-client|reset-server|reset-both|block-url|wildfire-upload-success|wildfire-upload-fail|wildfire-upload-skip>
+show log data action not-equal <alert|allow|deny|drop|drop-all-packets|reset-client|reset-server|reset-both|block-url|wildfire-upload-success|wildfire-upload-fail|wildfire-upload-skip>
+show log data srcuser equal <value>
+show log data dstuser equal <value>
+show log data category equal <value>
+show log data category not-equal <value>
+show log config direction equal <forward|backward>
+show log config csv-output equal <yes|no>
+show log config query equal <value>
+show log config receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log config start-time equal <value>
+show log config end-time equal <value>
+show log config client equal <web|cli>
+show log config client not-equal <web|cli>
+show log config cmd equal <add|clone|commit|create|delete|edit|get|load-from-disk|move|rename|save-to-disk|set>
+show log config cmd not-equal <add|clone|commit|create|delete|edit|get|load-from-disk|move|rename|save-to-disk|set>
+show log config result equal <succeeded|failed|unauthorized>
+show log config result not-equal <succeeded|failed|unauthorized>
+show log system direction equal <forward|backward>
+show log system csv-output equal <yes|no>
+show log system query equal <value>
+show log system receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log system start-time equal <value>
+show log system end-time equal <value>
+show log system opaque contains <value>
+show log system severity equal <critical|high|medium|low|informational>
+show log system severity not-equal <critical|high|medium|low|informational>
+show log system severity greater-than-or-equal <critical|high|medium|low|informational>
+show log system severity less-than-or-equal <critical|high|medium|low|informational>
+show log system subtype equal <value>
+show log system subtype not-equal <value>
+show log system object equal <value>
+show log system object not-equal <value>
+show log system eventid equal <value>
+show log system eventid not-equal <value>
+show log system id equal <value>
+show log system id not-equal <value>
+show log alarm opaque contains <value>
+show log alarm direction equal <forward|backward>
+show log alarm csv-output equal <yes|no>
+show log alarm query equal <value>
+show log alarm receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log alarm start-time equal <value>
+show log alarm end-time equal <value>
+show log alarm vsys equal <value>
+show log alarm admin equal <value>
+show log alarm src equal <ip/netmask>
+show log alarm dst equal <ip/netmask>
+show log alarm sport equal <0-65535>
+show log alarm dport equal <0-65535>
+show log alarm ack_admin equal <value>
+show log alarm rulegroup equal <value>
+show log alarm time_acknowledged equal <value>
+show log appstat direction equal <forward|backward>
+show log appstat csv-output equal <yes|no>
+show log appstat query equal <value>
+show log appstat receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log appstat start-time equal <value>
+show log appstat end-time equal <value>
+show log appstat name equal <value>
+show log appstat name not-equal <value>
+show log appstat type equal <value>
+show log appstat type not-equal <value>
+show log appstat risk equal <1|2|3|4|5>
+show log appstat risk not-equal <1|2|3|4|5>
+show log appstat risk greater-than-or-equal <1|2|3|4|5>
+show log appstat risk less-than-or-equal <1|2|3|4|5>
+show log trsum direction equal <forward|backward>
+show log trsum receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log trsum csv-output equal <yes|no>
+show log trsum query equal <value>
+show log trsum start-time equal <value>
+show log trsum end-time equal <value>
+show log trsum app equal <value>
+show log trsum app not-equal <value>
+show log trsum src in <value>
+show log trsum dst in <value>
+show log trsum rule equal <value>
+show log trsum rule not-equal <value>
+show log trsum srcuser equal <value>
+show log trsum srcuser not-equal <value>
+show log trsum dstuser equal <value>
+show log trsum dstuser not-equal <value>
+show log trsum srcloc equal <value>
+show log trsum srcloc not-equal <value>
+show log trsum srcloc greater-than-or-equal <value>
+show log trsum srcloc less-than-or-equal <value>
+show log trsum dstloc equal <value>
+show log trsum dstloc not-equal <value>
+show log trsum dstloc greater-than-or-equal <value>
+show log trsum dstloc less-than-or-equal <value>
+show log hourlytrsum direction equal <forward|backward>
+show log hourlytrsum receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log hourlytrsum csv-output equal <yes|no>
+show log hourlytrsum query equal <value>
+show log hourlytrsum start-time equal <value>
+show log hourlytrsum end-time equal <value>
+show log hourlytrsum app equal <value>
+show log hourlytrsum app not-equal <value>
+show log hourlytrsum src in <value>
+show log hourlytrsum dst in <value>
+show log hourlytrsum rule equal <value>
+show log hourlytrsum rule not-equal <value>
+show log hourlytrsum srcuser equal <value>
+show log hourlytrsum srcuser not-equal <value>
+show log hourlytrsum dstuser equal <value>
+show log hourlytrsum dstuser not-equal <value>
+show log hourlytrsum srcloc equal <value>
+show log hourlytrsum srcloc not-equal <value>
+show log hourlytrsum srcloc greater-than-or-equal <value>
+show log hourlytrsum srcloc less-than-or-equal <value>
+show log hourlytrsum dstloc equal <value>
+show log hourlytrsum dstloc not-equal <value>
+show log hourlytrsum dstloc greater-than-or-equal <value>
+show log hourlytrsum dstloc less-than-or-equal <value>
+show log dailytrsum direction equal <forward|backward>
+show log dailytrsum receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log dailytrsum csv-output equal <yes|no>
+show log dailytrsum query equal <value>
+show log dailytrsum start-time equal <value>
+show log dailytrsum end-time equal <value>
+show log dailytrsum app equal <value>
+show log dailytrsum app not-equal <value>
+show log dailytrsum src in <value>
+show log dailytrsum dst in <value>
+show log dailytrsum rule equal <value>
+show log dailytrsum rule not-equal <value>
+show log dailytrsum srcuser equal <value>
+show log dailytrsum srcuser not-equal <value>
+show log dailytrsum dstuser equal <value>
+show log dailytrsum dstuser not-equal <value>
+show log dailytrsum srcloc equal <value>
+show log dailytrsum srcloc not-equal <value>
+show log dailytrsum srcloc greater-than-or-equal <value>
+show log dailytrsum srcloc less-than-or-equal <value>
+show log dailytrsum dstloc equal <value>
+show log dailytrsum dstloc not-equal <value>
+show log dailytrsum dstloc greater-than-or-equal <value>
+show log dailytrsum dstloc less-than-or-equal <value>
+show log weeklytrsum direction equal <forward|backward>
+show log weeklytrsum receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log weeklytrsum csv-output equal <yes|no>
+show log weeklytrsum query equal <value>
+show log weeklytrsum start-time equal <value>
+show log weeklytrsum end-time equal <value>
+show log weeklytrsum app equal <value>
+show log weeklytrsum app not-equal <value>
+show log weeklytrsum src in <value>
+show log weeklytrsum dst in <value>
+show log weeklytrsum rule equal <value>
+show log weeklytrsum rule not-equal <value>
+show log weeklytrsum srcuser equal <value>
+show log weeklytrsum srcuser not-equal <value>
+show log weeklytrsum dstuser equal <value>
+show log weeklytrsum dstuser not-equal <value>
+show log weeklytrsum srcloc equal <value>
+show log weeklytrsum srcloc not-equal <value>
+show log weeklytrsum srcloc greater-than-or-equal <value>
+show log weeklytrsum srcloc less-than-or-equal <value>
+show log weeklytrsum dstloc equal <value>
+show log weeklytrsum dstloc not-equal <value>
+show log weeklytrsum dstloc greater-than-or-equal <value>
+show log weeklytrsum dstloc less-than-or-equal <value>
+show log thsum direction equal <forward|backward>
+show log thsum receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log thsum csv-output equal <yes|no>
+show log thsum query equal <value>
+show log thsum start-time equal <value>
+show log thsum end-time equal <value>
+show log thsum app equal <value>
+show log thsum app not-equal <value>
+show log thsum src in <value>
+show log thsum dst in <value>
+show log thsum rule equal <value>
+show log thsum rule not-equal <value>
+show log thsum srcuser equal <value>
+show log thsum srcuser not-equal <value>
+show log thsum dstuser equal <value>
+show log thsum dstuser not-equal <value>
+show log thsum srcloc equal <value>
+show log thsum srcloc not-equal <value>
+show log thsum srcloc greater-than-or-equal <value>
+show log thsum srcloc less-than-or-equal <value>
+show log thsum dstloc equal <value>
+show log thsum dstloc not-equal <value>
+show log thsum dstloc greater-than-or-equal <value>
+show log thsum dstloc less-than-or-equal <value>
+show log thsum threatid equal <value>
+show log thsum threatid not-equal <value>
+show log thsum threatid greater-than-or-equal <value>
+show log thsum threatid less-than-or-equal <value>
+show log thsum subtype equal <value>
+show log thsum subtype not-equal <value>
+show log hourlythsum direction equal <forward|backward>
+show log hourlythsum receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log hourlythsum csv-output equal <yes|no>
+show log hourlythsum query equal <value>
+show log hourlythsum start-time equal <value>
+show log hourlythsum end-time equal <value>
+show log hourlythsum app equal <value>
+show log hourlythsum app not-equal <value>
+show log hourlythsum src in <value>
+show log hourlythsum dst in <value>
+show log hourlythsum rule equal <value>
+show log hourlythsum rule not-equal <value>
+show log hourlythsum srcuser equal <value>
+show log hourlythsum srcuser not-equal <value>
+show log hourlythsum dstuser equal <value>
+show log hourlythsum dstuser not-equal <value>
+show log hourlythsum srcloc equal <value>
+show log hourlythsum srcloc not-equal <value>
+show log hourlythsum srcloc greater-than-or-equal <value>
+show log hourlythsum srcloc less-than-or-equal <value>
+show log hourlythsum dstloc equal <value>
+show log hourlythsum dstloc not-equal <value>
+show log hourlythsum dstloc greater-than-or-equal <value>
+show log hourlythsum dstloc less-than-or-equal <value>
+show log hourlythsum threatid equal <value>
+show log hourlythsum threatid not-equal <value>
+show log hourlythsum threatid greater-than-or-equal <value>
+show log hourlythsum threatid less-than-or-equal <value>
+show log hourlythsum subtype equal <value>
+show log hourlythsum subtype not-equal <value>
+show log dailythsum direction equal <forward|backward>
+show log dailythsum receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log dailythsum csv-output equal <yes|no>
+show log dailythsum query equal <value>
+show log dailythsum start-time equal <value>
+show log dailythsum end-time equal <value>
+show log dailythsum app equal <value>
+show log dailythsum app not-equal <value>
+show log dailythsum src in <value>
+show log dailythsum dst in <value>
+show log dailythsum rule equal <value>
+show log dailythsum rule not-equal <value>
+show log dailythsum srcuser equal <value>
+show log dailythsum srcuser not-equal <value>
+show log dailythsum dstuser equal <value>
+show log dailythsum dstuser not-equal <value>
+show log dailythsum srcloc equal <value>
+show log dailythsum srcloc not-equal <value>
+show log dailythsum srcloc greater-than-or-equal <value>
+show log dailythsum srcloc less-than-or-equal <value>
+show log dailythsum dstloc equal <value>
+show log dailythsum dstloc not-equal <value>
+show log dailythsum dstloc greater-than-or-equal <value>
+show log dailythsum dstloc less-than-or-equal <value>
+show log dailythsum threatid equal <value>
+show log dailythsum threatid not-equal <value>
+show log dailythsum threatid greater-than-or-equal <value>
+show log dailythsum threatid less-than-or-equal <value>
+show log dailythsum subtype equal <value>
+show log dailythsum subtype not-equal <value>
+show log weeklythsum direction equal <forward|backward>
+show log weeklythsum receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log weeklythsum csv-output equal <yes|no>
+show log weeklythsum query equal <value>
+show log weeklythsum start-time equal <value>
+show log weeklythsum end-time equal <value>
+show log weeklythsum app equal <value>
+show log weeklythsum app not-equal <value>
+show log weeklythsum src in <value>
+show log weeklythsum dst in <value>
+show log weeklythsum rule equal <value>
+show log weeklythsum rule not-equal <value>
+show log weeklythsum srcuser equal <value>
+show log weeklythsum srcuser not-equal <value>
+show log weeklythsum dstuser equal <value>
+show log weeklythsum dstuser not-equal <value>
+show log weeklythsum srcloc equal <value>
+show log weeklythsum srcloc not-equal <value>
+show log weeklythsum srcloc greater-than-or-equal <value>
+show log weeklythsum srcloc less-than-or-equal <value>
+show log weeklythsum dstloc equal <value>
+show log weeklythsum dstloc not-equal <value>
+show log weeklythsum dstloc greater-than-or-equal <value>
+show log weeklythsum dstloc less-than-or-equal <value>
+show log weeklythsum threatid equal <value>
+show log weeklythsum threatid not-equal <value>
+show log weeklythsum threatid greater-than-or-equal <value>
+show log weeklythsum threatid less-than-or-equal <value>
+show log weeklythsum subtype equal <value>
+show log weeklythsum subtype not-equal <value>
+show log hipmatch direction equal <forward|backward>
+show log hipmatch query equal <value>
+show log hipmatch receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log hipmatch src in <ip/netmask>
+show log hipmatch src not-in <ip/netmask>
+show log hipmatch srcuser equal <value>
+show log hipmatch machinename equal <value>
+show log hipmatch machinename not-equal <value>
+show log hipmatch os equal <value>
+show log hipmatch os not-equal <value>
+show log hipmatch matchname equal <value>
+show log hipmatch matchname not-equal <value>
+show log hipmatch matchtype equal <object|profile>
+show log hipmatch matchtype not-equal <object|profile>
+show log iptag receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log iptag vsys equal <value>
+show log iptag ip in <ip/netmask>
+show log iptag ip not-in <ip/netmask>
+show log iptag tag_name equal <value>
+show log iptag tag_name not-equal <value>
+show log iptag event_id equal <unknown|login|logout|timeout|register|unregister>
+show log iptag event_id not-equal <unknown|login|logout|timeout|register|unregister>
+show log iptag datasource_type equal <unknown|xml-api|ha|vm-monitor>
+show log iptag datasource_type not-equal <unknown|xml-api|ha|vm-monitor>
+show log iptag datasource_subtype equal <unknown|VMware_ESXi|VMware_vCenter>
+show log iptag datasource_subtype not-equal <unknown|VMware_ESXi|VMware_vCenter>
+show log iptag datasourcename equal <value>
+show log iptag datasourcename not-equal <value>
+show log mdm receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log userid direction equal <forward|backward>
+show log userid query equal <value>
+show log userid receive_time in <last-60-seconds|last-15-minutes|last-hour|last-6-hrs|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-30-days|last-calendar-month>
+show log userid vsys equal <value>
+show log userid ip in <ip/netmask>
+show log userid ip not-in <ip/netmask>
+show log userid user equal <value>
+show log userid datasourcename equal <value>
+show log userid datasource equal <unknown|agent|ts-agent|event-log|probing|server-session-monitor|captive-portal|vpn-client|xml-api|ha|syslog>
+show log userid datasourcetype equal <unknown|directory-server|exchange-server|wmi-probing|netbios-probing|client-cert|ntlm|kerberos|authenticate|globalprotect|vpn-client>
+show log userid beginport equal <1-65535>
+show log userid beginport not-equal <1-65535>
+show log userid endport equal <1-65535>
+show log userid endport not-equal <1-65535>
+show counter interface <value>|<management|all>
+show counter management-server
+show counter global name <value>
+show counter global filter category <value> severity <value> aspect <value> delta <yes|no> packet-filter <yes|no> value <all|non-zero>
+show ntp
+show high-availability interface <ha1|ha1-backup>
+show high-availability all
+show high-availability state
+show high-availability link-monitoring
+show high-availability path-monitoring
+show high-availability control-link statistics
+show high-availability transitions
+show high-availability flap-statistics
+show session id <1-2147483648>
+show session info
+show session rematch
+show session meter
+show session all start-at <1-2097152> filter nat <none|source|destination|both> ssl-decrypt <yes|no> count <yes|no> type <flow|predict> state <initial|opening|active|discard|closing|closed> from <value> to <value> source <ip/netmask> destination <ip/netmask> source-user <value> destination-user <value> source-port <1-65535> destination-port <1-65535> protocol <1-255> application <value> rule <value> nat-rule <value> qos-rule <value> pbf-rule <value> hw-interface <value> ingress-interface <value> egress-interface <value> min-kb <1-1048576> qos-node-id <0-5000>|<-2> qos-class <1-8> vsys-name <value>|<any> rematch <security-policy>
+show zone-protection zone <value>
+show statistics
+show admins all
+show jobs id <1-4294967296>
+show jobs all
+show jobs pending
+show jobs processed
+show threat id <1-4294967296,...>
+show location ip <ip/netmask>
+show object static ip <ip/netmask> vsys <value>
+show object dynamic-address-group name <value>
+show object dynamic-address-group all
+show object registered-address ip <ip/netmask>
+show object registered-address tag <value>
+show object registered-address all option <count|file>
+show report id <1-4294967296>
+show report directory-listing
+show report jobs
+show report predefined name equal <top-attackers|top-victims|top-attackers-by-countries|top-victims-by-countries|top-sources|top-destinations|top-destination-countries|top-source-countries|top-connections|top-ingress-interfaces|top-egress-interfaces|top-ingress-zones|top-egress-zones|top-applications|top-http-applications|top-rules|top-attacks|top-spyware-threats|top-viruses|top-vulnerabilities|top-websites|top-url-categories|top-url-users|top-url-user-behavior|unknown-tcp-connections|unknown-udp-connections|top-denied-sources|top-denied-destinations|top-denied-applications>
+show report predefined start-time equal <value>
+show report predefined end-time equal <value>
+show report custom database equal <appstat|threat|thsum|traffic|trsum>
+show report custom topn equal <value>
+show report custom receive_time in <last-hour|last-12-hrs|last-24-hrs|last-7-days|last-30-days|last-calendar-month>
+show report custom query equal <value>
+show report custom aggregate-fields equal <value>
+show report custom value-fields equal <value>
+show query id <1-4294967296>
+show query jobs
+show url-cloud status
+show system software status
+show system masterkey-properties
+show system info
+show system services
+show system state filter <value>
+show system state filter-pretty <value>
+show system state browser
+show system environmentals slot <value>
+show system environmentals fans slot <value>
+show system environmentals thermal slot <value>
+show system environmentals power slot <value>
+show system statistics session
+show system statistics application
+show system resources follow
+show system disk-space
+show system logdb-quota
+show system files
+show system setting logging
+show system setting packet-descriptor-monitor
+show system setting mp-memory-monitor
+show system setting zip
+show system setting packet
+show system setting util
+show system setting pow
+show system setting ctd state
+show system setting ctd threat id <1-4294967295> application <0-4294967295> profile <0-4294967295>
+show system setting ctd url-block-cache
+show system setting jumbo-frame
+show system setting multi-vsys
+show system setting url-database
+show system setting url-cache statistics
+show system setting url-cache all
+show system setting url-filtering-feature
+show system setting ssl-decrypt setting
+show system setting ssl-decrypt certificate-cache
+show system setting ssl-decrypt certificate
+show system setting ssl-decrypt notify-cache
+show system setting ssl-decrypt exclude-cache
+show system setting ssl-decrypt session-cache
+show system setting ssl-decrypt hsm-request
+show system setting ssl-decrypt memory detail
+show system setting shared-policy
+show system setting template
+show system setting target-vsys
+show pbf rule name <value>
+show pbf rule all
+show pbf return-mac name <value>
+show pbf return-mac all
+show qos interface <value> throughput <0-65535>
+show qos interface <value> tunnel-throughput <value>
+show qos interface <value> match-rule
+show qos interface <value> counter
+show vpn gateway name <value>
+show vpn tunnel name <value>
+show vpn ike-sa gateway <value>
+show vpn ipsec-sa tunnel <value>
+show vpn flow name <value>
+show vpn flow tunnel-id <1-65535>
+show global-protect-gateway gateway name <value> type <remote-user|satellite>
+show global-protect-gateway current-user gateway <value> domain <value> user <value>
+show global-protect-gateway current-satellite gateway <value> satellite <value>
+show global-protect-gateway previous-user gateway <value> domain <value> user <value>
+show global-protect-gateway previous-satellite gateway <value> satellite <value>
+show global-protect-gateway flow name <value>
+show global-protect-gateway flow tunnel-id <1-65535>
+show global-protect-gateway flow-site-to-site name <value>
+show global-protect-gateway flow-site-to-site tunnel-id <1-65535>
+show global-protect-satellite interface <value>|<all>
+show global-protect-satellite satellite name <value>
+show global-protect-satellite current-gateway satellite <value> gateway <value>
+show global-protect-mdm state <value>|<all>
+show global-protect-mdm statistics
+show routing interface
+show routing resource
+show routing summary virtual-router <value>
+show routing fib virtual-router <value>
+show routing route destination <ip/netmask> interface <value> nexthop <ip/netmask> type <static|connect|bgp|ospf|rip> virtual-router <value> count <1-524288>
+show routing multicast route group <ip/netmask> source <ip/netmask> interface <value> virtual-router <value>
+show routing multicast fib group <ip/netmask> source <ip/netmask> interface <value> virtual-router <value>
+show routing multicast group-permission interface <value> virtual-router <value>
+show routing multicast igmp interface virtual-router <value>
+show routing multicast igmp membership interface <value> virtual-router <value>
+show routing multicast igmp statistics interface <value>
+show routing multicast pim interface virtual-router <value>
+show routing multicast pim neighbor virtual-router <value>
+show routing multicast pim group-mapping group <ip/netmask> virtual-router <value>
+show routing multicast pim elected-bsr
+show routing multicast pim state virtual-router <value> group <ip/netmask> interface <value> source <ip/netmask>|<any> rpt-only <yes|no>
+show routing multicast pim statistics interface <value> neighbor <ip/netmask>
+show routing protocol redist all virtual-router <value>
+show routing protocol redist bgp virtual-router <value>
+show routing protocol redist ospf virtual-router <value>
+show routing protocol redist ospfv3 virtual-router <value>
+show routing protocol redist rip virtual-router <value>
+show routing protocol bgp summary virtual-router <value>
+show routing protocol bgp peer peer-name <value> virtual-router <value>
+show routing protocol bgp peer-group group-name <value> virtual-router <value>
+show routing protocol bgp policy virtual-router <value> aggregate
+show routing protocol bgp policy virtual-router <value> import
+show routing protocol bgp policy virtual-router <value> export
+show routing protocol bgp policy virtual-router <value> cond-adv
+show routing protocol bgp loc-rib peer <value> prefix <ip/netmask> nexthop <ip/netmask> virtual-router <value> count <1-524288>
+show routing protocol bgp rib-out peer <value> prefix <ip/netmask> nexthop <ip/netmask> virtual-router <value> count <1-524288>
+show routing protocol bgp loc-rib-detail peer <value> prefix <ip/netmask> nexthop <ip/netmask> virtual-router <value> count <1-524288>
+show routing protocol bgp rib-out-detail peer <value> prefix <ip/netmask> nexthop <ip/netmask> virtual-router <value> count <1-524288>
+show routing protocol ospf summary virtual-router <value>
+show routing protocol ospf area virtual-router <value>
+show routing protocol ospf interface virtual-router <value>
+show routing protocol ospf virt-link virtual-router <value>
+show routing protocol ospf neighbor virtual-router <value>
+show routing protocol ospf virt-neighbor virtual-router <value>
+show routing protocol ospf lsdb virtual-router <value>
+show routing protocol ospf dumplsdb virtual-router <value>
+show routing protocol ospf graceful-restart virtual-router <value>
+show routing protocol ospfv3 summary virtual-router <value>
+show routing protocol ospfv3 area virtual-router <value>
+show routing protocol ospfv3 interface brief <yes|no> virtual-router <value>
+show routing protocol ospfv3 virt-link virtual-router <value>
+show routing protocol ospfv3 neighbor brief <yes|no> virtual-router <value>
+show routing protocol ospfv3 virt-neighbor brief <yes|no> virtual-router <value>
+show routing protocol ospfv3 lsdb scope <link-local|area-local|as-local|all> adv-rtr <ip/netmask> area-id <ip/netmask> lsa-id <ip/netmask> hexdump <yes|no> filter-type-area <inter-area-prefix|inter-area-router|intra-area-prefix|network|router|nssa> virtual-router <value>
+show routing protocol ospfv3 dumplsdb scope <link-local|area-local|as-local|all> adv-rtr <ip/netmask> area-id <ip/netmask> lsa-id <ip/netmask> hexdump <yes|no> filter-type-area <inter-area-prefix|inter-area-router|intra-area-prefix|network|router|nssa> virtual-router <value>
+show routing protocol ospfv3 graceful-restart virtual-router <value>
+show routing protocol rip summary virtual-router <value>
+show routing protocol rip interface virtual-router <value>
+show routing protocol rip peer virtual-router <value>
+show routing protocol rip database virtual-router <value>
+show resource limit policies
+show resource limit session
+show resource limit ssl-vpn
+show resource limit vpn
+show sslmgr-store satellite-info portal name <value> serialno <value> state <assigned|unassigned>
+show sslmgr-store certificate-info issuer <value>
+show sslmgr-store certificate-info portal name <value> serialno <value> db-serialno <value>
+show sslmgr-store serialno-certificate-info db-serialno <value>
+show sslmgr-store config-certificate-info db-serialno <value> issuer-subjectname-hash <value>
+show sslmgr-store config-ca-certificate subjectname-hash <value> publickey-hash <value>
+show global-protect redirect
+show hsm client-address
+show hsm ha-status
+show hsm info
+show hsm nshield-connect-rfs
+show hsm state
+show hsm servers
+show hsm slots
+show log-collector preference-list
+debug cli <on|off|detail|show>
+debug show vm-series interfaces all
+debug logview role <value> slot <value> severity <value> quiet <yes|no> display-forward <yes|no> thorough <yes|no> max-logs <100-20000> component <value> start-time <value> end-time <value>
+debug system disk-smart-info disk-1
+debug system process-info
+debug system maintenance-mode
+debug system disk-sync
+debug system check-fragment
+debug system ssh-key-reset management
+debug system ssh-key-reset high-availability
+debug system ssh-key-reset all
+debug syslog-ng stats
+debug swm list
+debug swm log
+debug swm history
+debug swm status
+debug swm unlock
+debug swm revert
+debug swm rebuild-content-db
+debug swm refresh content
+debug swm info image <value>
+debug swm install image <value> patch <value>
+debug swm load image <value>
+debug software fd-limit service <value> limit <0-4294967295>
+debug software no-fd-limit service <value>
+debug software virt-limit service <value> limit <0-4194303>
+debug software no-virt-limit service <value>
+debug software restart pan-comm
+debug software restart device-server
+debug software restart management-server
+debug software restart web-server
+debug software restart l3-service
+debug software restart sslvpn-web-server
+debug software restart rasmgr
+debug software restart log-receiver
+debug software restart ntp
+debug software restart routed
+debug software restart snmpd
+debug software restart user-id
+debug software restart vardata-receiver
+debug software restart satd
+debug software restart sslmgr
+debug software restart dnsproxy
+debug software core pan-comm
+debug software core device-server
+debug software core management-server
+debug software core web-server
+debug software core l3-service
+debug software core sslvpn-web-server
+debug software core rasmgr
+debug software core log-receiver
+debug software core routed
+debug software core user-id
+debug software core vardata-receiver
+debug software trace device-server
+debug software trace management-server
+debug software trace web-server
+debug software trace l3-service
+debug software trace sslvpn-web-server
+debug software trace log-receiver
+debug software trace user-id
+debug software trace vardata-receiver
+debug high-availability on <error|warn|info|debug|dump>
+debug high-availability off
+debug high-availability show
+debug high-availability internal-dump
+debug high-availability dataplane-status
+debug master-service on <error|warn|info|debug|dump>
+debug master-service off
+debug master-service show
+debug master-service internal-dump
+debug logdb-usage
+debug management-server on <error|warn|info|debug|dump>
+debug management-server db-rollup <on|off>
+debug management-server memory <info|trim>
+debug management-server vld stats cc
+debug management-server conn
+debug management-server log-forwarding-stats
+debug management-server off
+debug management-server clear
+debug management-server show
+debug management-server db-intervals start-time <value> end-time <value> period <last-hour|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-7-calendar-days|last-calendar-week|last-30-days|last-30-calendar-days|last-calendar-month> db <trsum|hourlytrsum|dailytrsum|weeklytrsum|thsum|hourlythsum|dailythsum|weeklythsum>
+debug management-server rolledup-intervals start-time <value> end-time <value> period <last-hour|last-12-hrs|last-24-hrs|last-calendar-day|last-7-days|last-7-calendar-days|last-calendar-week|last-30-days|last-30-calendar-days|last-calendar-month> db <trsum|thsum>
+debug management-server log-collector-agent-status
+debug management-server client disable <value>
+debug management-server client enable <value>
+debug management-server set comm <basic|detail|all>
+debug management-server set panorama <basic|detail|all>
+debug management-server set proxy <basic|detail|all>
+debug management-server set server <basic|detail|all>
+debug management-server set cfg <basic|detail|all>
+debug management-server set log <basic|detail|all>
+debug management-server set logaction <basic|detail|all>
+debug management-server set logquery <basic|detail|all>
+debug management-server set report <basic|detail|all>
+debug management-server set commit <basic|detail|all>
+debug management-server set schema <basic|detail|all>
+debug management-server set content <basic|detail|all>
+debug management-server set auth <basic|detail|all>
+debug management-server set fqdn <basic|detail|all>
+debug management-server set settings <basic|detail|all>
+debug management-server set logforwarding <basic|detail|all>
+debug management-server set commoncriteria <basic|detail|all>
+debug management-server set lock <basic|detail|all>
+debug management-server set all
+debug management-server unset comm <basic|detail|all>
+debug management-server unset panorama <basic|detail|all>
+debug management-server unset proxy <basic|detail|all>
+debug management-server unset server <basic|detail|all>
+debug management-server unset cfg <basic|detail|all>
+debug management-server unset log <basic|detail|all>
+debug management-server unset logaction <basic|detail|all>
+debug management-server unset logquery <basic|detail|all>
+debug management-server unset report <basic|detail|all>
+debug management-server unset commit <basic|detail|all>
+debug management-server unset schema <basic|detail|all>
+debug management-server unset content <basic|detail|all>
+debug management-server unset auth <basic|detail|all>
+debug management-server unset fqdn <basic|detail|all>
+debug management-server unset settings <basic|detail|all>
+debug management-server unset logforwarding <basic|detail|all>
+debug management-server unset commoncriteria <basic|detail|all>
+debug management-server unset lock <basic|detail|all>
+debug management-server unset all
+debug management-server template dump-config from <local|template|merged> xpath <value>
+debug management-server user info name <value>
+debug authd on <error|warn|info|debug|dump>
+debug authd off
+debug authd show
+debug authd use-domain yes
+debug authd use-domain no
+debug authd admin-db delete
+debug device-server on <error|warn|info|debug|dump>
+debug device-server set third-party <libcurl|all>
+debug device-server set misc <misc|all>
+debug device-server set base <config|ha|id|all>
+debug device-server set url <basic|cloud|ha|match|rfs|stat|all>
+debug device-server set url_trie <basic|stat|all>
+debug device-server set config <basic|tdb|fpga|all>
+debug device-server set tdb <basic|aho|all>
+debug device-server set all
+debug device-server unset third-party <libcurl|all>
+debug device-server unset base <config|ha|id|all>
+debug device-server unset misc <misc|all>
+debug device-server unset url <basic|all>
+debug device-server unset config <basic|tdb|fpga|all>
+debug device-server unset tdb <basic|aho|all>
+debug device-server unset all
+debug device-server test url-category <1-16383>
+debug device-server test admin-override-password <value>
+debug device-server test botnet-domain
+debug device-server test cloud-traffic
+debug device-server test dynamic-url cloud <yes|no> unknown-only <yes|no> async <yes|no>
+debug device-server test url-update-server
+debug device-server reset brightcloud-database
+debug device-server reset url dynamic-url-timeout <1-43200>
+debug device-server reset url dynamic-url-size <10-1000000>
+debug device-server reset logging statistics
+debug device-server reset id-manager type all
+debug device-server reset id-manager type global-interface
+debug device-server reset id-manager type global-rib-instance
+debug device-server reset id-manager type global-tunnel
+debug device-server reset id-manager type global-vlan
+debug device-server reset id-manager type global-vlan-domain
+debug device-server reset id-manager type global-vrouter
+debug device-server reset id-manager type ikey-gateway
+debug device-server reset id-manager type nat-rule
+debug device-server reset id-manager type pbf-rule
+debug device-server reset id-manager type security-rule
+debug device-server reset id-manager type shared-application
+debug device-server reset id-manager type shared-gateway
+debug device-server reset id-manager type shared-region
+debug device-server reset id-manager type shared-custom-url-category
+debug device-server reset id-manager type ssl-rule
+debug device-server reset id-manager type vsys
+debug device-server reset id-manager type vsys-application
+debug device-server reset id-manager type vsys-custom-url-category
+debug device-server reset id-manager type vsys-region
+debug device-server reset id-manager type zone
+debug device-server reset config
+debug device-server reset com statistics
+debug device-server save dynamic-url-database
+debug device-server bc-url-db cache-enable <yes|no>
+debug device-server bc-url-db cache-resize <1-10000000>
+debug device-server bc-url-db cache-clear
+debug device-server bc-url-db cache-save
+debug device-server bc-url-db cache-load
+debug device-server bc-url-db db-info
+debug device-server bc-url-db show-stats
+debug device-server bc-url-db bloom-verify-basedb
+debug device-server bc-url-db bloom-stats
+debug device-server pan-url-db cloud-static-list-enable <value>
+debug device-server pan-url-db cloud-static-list-disable
+debug device-server pan-url-db db-info
+debug device-server pan-url-db db-perf
+debug device-server pan-url-db show-stats
+debug device-server pan-url-db cloud-reelect
+debug device-server pan-url-db db-backup back-duration <5-480> back-threshold <3-30>
+debug device-server dump memory <summary|detail>
+debug device-server dump dynamic-url database start-from <1-1000000> category <value>
+debug device-server dump dynamic-url statistics
+debug device-server dump pan-url-db statistics
+debug device-server dump regips ip <ip/netmask>
+debug device-server dump regips tag <value>
+debug device-server dump regips summary
+debug device-server dump tag-table tag <value>
+debug device-server dump idmgr high-availability state
+debug device-server dump idmgr type shared-app-signature id <1-32767>
+debug device-server dump idmgr type shared-app-signature name <value>
+debug device-server dump idmgr type shared-app-signature all
+debug device-server dump idmgr type shared-url-filtering id <1-250>
+debug device-server dump idmgr type shared-url-filtering name <value>
+debug device-server dump idmgr type shared-url-filtering all
+debug device-server dump idmgr type vsys-app-signature id <32768-65535>
+debug device-server dump idmgr type vsys-app-signature name <value>
+debug device-server dump idmgr type vsys-app-signature all
+debug device-server dump idmgr type vsys-url-filtering id <251-5000>
+debug device-server dump idmgr type vsys-url-filtering name <value>
+debug device-server dump idmgr type vsys-url-filtering all
+debug device-server dump idmgr type log-setting id <1-65535>
+debug device-server dump idmgr type log-setting name <value>
+debug device-server dump idmgr type log-setting all
+debug device-server dump idmgr type shared-qos-profile id <1-65535>
+debug device-server dump idmgr type shared-qos-profile name <value>
+debug device-server dump idmgr type shared-qos-profile all
+debug device-server dump idmgr type shared-qos-group id <1-255>
+debug device-server dump idmgr type shared-qos-group name <value>
+debug device-server dump idmgr type shared-qos-group all
+debug device-server dump idmgr type shared-qos-member id <1-65535>
+debug device-server dump idmgr type shared-qos-member name <value>
+debug device-server dump idmgr type shared-qos-member all
+debug device-server dump idmgr type qos-rule id <1-65535>
+debug device-server dump idmgr type qos-rule name <value>
+debug device-server dump idmgr type qos-rule all
+debug device-server dump idmgr type shared-bgp-peergrp id <1-2047>
+debug device-server dump idmgr type shared-bgp-peergrp name <value>
+debug device-server dump idmgr type shared-bgp-peergrp all
+debug device-server dump idmgr type shared-bgp-peer id <1-2047>
+debug device-server dump idmgr type shared-bgp-peer name <value>
+debug device-server dump idmgr type shared-bgp-peer all
+debug device-server dump idmgr type shared-bgp-aggr-address id <1-2047>
+debug device-server dump idmgr type shared-bgp-aggr-address name <value>
+debug device-server dump idmgr type shared-bgp-aggr-address all
+debug device-server dump idmgr type override-rule id <1-65535>
+debug device-server dump idmgr type override-rule name <value>
+debug device-server dump idmgr type override-rule all
+debug device-server dump idmgr type dos-rule id <1-65535>
+debug device-server dump idmgr type dos-rule name <value>
+debug device-server dump idmgr type dos-rule all
+debug device-server dump idmgr type interface-group id <1-255>
+debug device-server dump idmgr type interface-group name <value>
+debug device-server dump idmgr type interface-group all
+debug device-server dump idmgr type macl-rule id <1-4095>
+debug device-server dump idmgr type macl-rule name <value>
+debug device-server dump idmgr type macl-rule all
+debug device-server dump idmgr type ospfv3-virtual-link id <1-4095>
+debug device-server dump idmgr type ospfv3-virtual-link name <value>
+debug device-server dump idmgr type ospfv3-virtual-link all
+debug device-server dump idmgr type zone id <1-4294967295>
+debug device-server dump idmgr type zone name <value>
+debug device-server dump idmgr type zone all
+debug device-server dump idmgr type vsys id <1-4294967295>
+debug device-server dump idmgr type vsys name <value>
+debug device-server dump idmgr type vsys all
+debug device-server dump idmgr type global-tunnel id <1-65535>
+debug device-server dump idmgr type global-tunnel name <value>
+debug device-server dump idmgr type global-tunnel all
+debug device-server dump idmgr type global-interface id <1-4294967295>
+debug device-server dump idmgr type global-interface name <value>
+debug device-server dump idmgr type global-interface all
+debug device-server dump idmgr type global-if-counter id <1-4294967295>
+debug device-server dump idmgr type global-if-counter name <value>
+debug device-server dump idmgr type global-if-counter all
+debug device-server dump idmgr type global-vlan-domain id <1-4294967295>
+debug device-server dump idmgr type global-vlan-domain name <value>
+debug device-server dump idmgr type global-vlan-domain all
+debug device-server dump idmgr type global-vlan id <1-4294967295>
+debug device-server dump idmgr type global-vlan name <value>
+debug device-server dump idmgr type global-vlan all
+debug device-server dump idmgr type global-vrouter id <1-4294967295>
+debug device-server dump idmgr type global-vrouter name <value>
+debug device-server dump idmgr type global-vrouter all
+debug device-server dump idmgr type global-rib-instance id <1-4294967295>
+debug device-server dump idmgr type global-rib-instance name <value>
+debug device-server dump idmgr type global-rib-instance all
+debug device-server dump idmgr type shared-application id <1-4294967295>
+debug device-server dump idmgr type shared-application name <value>
+debug device-server dump idmgr type shared-application all
+debug device-server dump idmgr type custom-url-filter id <1-4294967295>
+debug device-server dump idmgr type custom-url-filter name <value>
+debug device-server dump idmgr type custom-url-filter all
+debug device-server dump idmgr type vsys-application id <1-4096>
+debug device-server dump idmgr type vsys-application name <value>
+debug device-server dump idmgr type vsys-application all
+debug device-server dump idmgr type security-rule id <1-4096>
+debug device-server dump idmgr type security-rule name <value>
+debug device-server dump idmgr type security-rule all
+debug device-server dump idmgr type nat-rule id <1-4096>
+debug device-server dump idmgr type nat-rule name <value>
+debug device-server dump idmgr type nat-rule all
+debug device-server dump idmgr type ssl-rule id <1-4096>
+debug device-server dump idmgr type ssl-rule name <value>
+debug device-server dump idmgr type ssl-rule all
+debug device-server dump idmgr type ike-gateway id <1-4096>
+debug device-server dump idmgr type ike-gateway name <value>
+debug device-server dump idmgr type ike-gateway all
+debug device-server dump idmgr type pbf-rule id <1-4096>
+debug device-server dump idmgr type pbf-rule name <value>
+debug device-server dump idmgr type pbf-rule all
+debug device-server dump idmgr type shared-custom-url-category id <1-4294967295>
+debug device-server dump idmgr type shared-custom-url-category name <value>
+debug device-server dump idmgr type shared-custom-url-category all
+debug device-server dump idmgr type vsys-custom-url-category id <1-4294967295>
+debug device-server dump idmgr type vsys-custom-url-category name <value>
+debug device-server dump idmgr type vsys-custom-url-category all
+debug device-server dump idmgr type shared-gateway id <1-4096>
+debug device-server dump idmgr type shared-gateway name <value>
+debug device-server dump idmgr type shared-gateway all
+debug device-server dump idmgr type shared-region id <1-1023>
+debug device-server dump idmgr type shared-region name <value>
+debug device-server dump idmgr type shared-region all
+debug device-server dump idmgr type vsys-region id <1024-3071>
+debug device-server dump idmgr type vsys-region name <value>
+debug device-server dump idmgr type vsys-region all
+debug device-server dump logging statistics
+debug device-server dump com all
+debug device-server dump com opcmd
+debug device-server dump com sshkey
+debug device-server dump com status
+debug device-server dump com url
+debug device-server off
+debug device-server clear
+debug device-server show
+debug mprelay on dump
+debug mprelay on debug
+debug mprelay on info
+debug mprelay on warn
+debug mprelay on error
+debug mprelay off
+debug mprelay show
+debug netconfig-agent on dump
+debug netconfig-agent on debug
+debug netconfig-agent on info
+debug netconfig-agent on warn
+debug netconfig-agent on error
+debug netconfig-agent off
+debug netconfig-agent show
+debug tac-login permanently-disable
+debug tac-login challenge
+debug tac-login response
+debug lpmgrd status
+debug lpmgrd dump idmgr type user id <1-4294967295>
+debug lpmgrd dump idmgr type user name <value>
+debug lpmgrd dump idmgr type user all
+debug lpmgrd dump idmgr type user-group id <1-4294967295>
+debug lpmgrd dump idmgr type user-group name <value>
+debug lpmgrd dump idmgr type user-group all
+debug lpmgrd dump idmgr type computer id <1-4294967295>
+debug lpmgrd dump idmgr type computer name <value>
+debug lpmgrd dump idmgr type computer all
+debug lpmgrd dump idmgr type gp-gateway id <1-4294967295>
+debug lpmgrd dump idmgr type gp-gateway name <value>
+debug lpmgrd dump idmgr type gp-gateway all
+debug lpmgrd dump idmgr type hip-profile id <1-1024>
+debug lpmgrd dump idmgr type hip-profile name <value>
+debug lpmgrd dump idmgr type hip-profile all
+debug lpmgrd dump idmgr type hip-object id <1-65535>
+debug lpmgrd dump idmgr type hip-object name <value>
+debug lpmgrd dump idmgr type hip-object all
+debug lpmgrd dump idmgr type shared-app-signature id <1-32767>
+debug lpmgrd dump idmgr type shared-app-signature name <value>
+debug lpmgrd dump idmgr type shared-app-signature all
+debug lpmgrd dump idmgr type shared-url-filtering id <1-250>
+debug lpmgrd dump idmgr type shared-url-filtering name <value>
+debug lpmgrd dump idmgr type shared-url-filtering all
+debug lpmgrd dump idmgr type vsys-app-signature id <32768-65535>
+debug lpmgrd dump idmgr type vsys-app-signature name <value>
+debug lpmgrd dump idmgr type vsys-app-signature all
+debug lpmgrd dump idmgr type vsys-url-filtering id <251-5000>
+debug lpmgrd dump idmgr type vsys-url-filtering name <value>
+debug lpmgrd dump idmgr type vsys-url-filtering all
+debug lpmgrd dump idmgr type log-setting id <1-65535>
+debug lpmgrd dump idmgr type log-setting name <value>
+debug lpmgrd dump idmgr type log-setting all
+debug lpmgrd dump idmgr type shared-qos-profile id <1-65535>
+debug lpmgrd dump idmgr type shared-qos-profile name <value>
+debug lpmgrd dump idmgr type shared-qos-profile all
+debug lpmgrd dump idmgr type shared-qos-group id <1-255>
+debug lpmgrd dump idmgr type shared-qos-group name <value>
+debug lpmgrd dump idmgr type shared-qos-group all
+debug lpmgrd dump idmgr type shared-qos-member id <1-65535>
+debug lpmgrd dump idmgr type shared-qos-member name <value>
+debug lpmgrd dump idmgr type shared-qos-member all
+debug lpmgrd dump idmgr type qos-rule id <1-65535>
+debug lpmgrd dump idmgr type qos-rule name <value>
+debug lpmgrd dump idmgr type qos-rule all
+debug lpmgrd dump idmgr type shared-bgp-peergrp id <1-2047>
+debug lpmgrd dump idmgr type shared-bgp-peergrp name <value>
+debug lpmgrd dump idmgr type shared-bgp-peergrp all
+debug lpmgrd dump idmgr type shared-bgp-peer id <1-2047>
+debug lpmgrd dump idmgr type shared-bgp-peer name <value>
+debug lpmgrd dump idmgr type shared-bgp-peer all
+debug lpmgrd dump idmgr type shared-bgp-aggr-address id <1-2047>
+debug lpmgrd dump idmgr type shared-bgp-aggr-address name <value>
+debug lpmgrd dump idmgr type shared-bgp-aggr-address all
+debug lpmgrd dump idmgr type override-rule id <1-65535>
+debug lpmgrd dump idmgr type override-rule name <value>
+debug lpmgrd dump idmgr type override-rule all
+debug lpmgrd dump idmgr type dos-rule id <1-65535>
+debug lpmgrd dump idmgr type dos-rule name <value>
+debug lpmgrd dump idmgr type dos-rule all
+debug lpmgrd dump idmgr type interface-group id <1-255>
+debug lpmgrd dump idmgr type interface-group name <value>
+debug lpmgrd dump idmgr type interface-group all
+debug lpmgrd dump idmgr type macl-rule id <1-4095>
+debug lpmgrd dump idmgr type macl-rule name <value>
+debug lpmgrd dump idmgr type macl-rule all
+debug lpmgrd dump idmgr type ospfv3-virtual-link id <1-4095>
+debug lpmgrd dump idmgr type ospfv3-virtual-link name <value>
+debug lpmgrd dump idmgr type ospfv3-virtual-link all
+debug lpmgrd dump idmgr type zone id <1-4294967295>
+debug lpmgrd dump idmgr type zone name <value>
+debug lpmgrd dump idmgr type zone all
+debug lpmgrd dump idmgr type vsys id <1-4294967295>
+debug lpmgrd dump idmgr type vsys name <value>
+debug lpmgrd dump idmgr type vsys all
+debug lpmgrd dump idmgr type global-tunnel id <1-65535>
+debug lpmgrd dump idmgr type global-tunnel name <value>
+debug lpmgrd dump idmgr type global-tunnel all
+debug lpmgrd dump idmgr type global-interface id <1-4294967295>
+debug lpmgrd dump idmgr type global-interface name <value>
+debug lpmgrd dump idmgr type global-interface all
+debug lpmgrd dump idmgr type global-if-counter id <1-4294967295>
+debug lpmgrd dump idmgr type global-if-counter name <value>
+debug lpmgrd dump idmgr type global-if-counter all
+debug lpmgrd dump idmgr type global-vlan-domain id <1-4294967295>
+debug lpmgrd dump idmgr type global-vlan-domain name <value>
+debug lpmgrd dump idmgr type global-vlan-domain all
+debug lpmgrd dump idmgr type global-vlan id <1-4294967295>
+debug lpmgrd dump idmgr type global-vlan name <value>
+debug lpmgrd dump idmgr type global-vlan all
+debug lpmgrd dump idmgr type global-vrouter id <1-4294967295>
+debug lpmgrd dump idmgr type global-vrouter name <value>
+debug lpmgrd dump idmgr type global-vrouter all
+debug lpmgrd dump idmgr type global-rib-instance id <1-4294967295>
+debug lpmgrd dump idmgr type global-rib-instance name <value>
+debug lpmgrd dump idmgr type global-rib-instance all
+debug lpmgrd dump idmgr type shared-application id <1-4294967295>
+debug lpmgrd dump idmgr type shared-application name <value>
+debug lpmgrd dump idmgr type shared-application all
+debug lpmgrd dump idmgr type custom-url-filter id <1-4294967295>
+debug lpmgrd dump idmgr type custom-url-filter name <value>
+debug lpmgrd dump idmgr type custom-url-filter all
+debug lpmgrd dump idmgr type vsys-application id <1-4096>
+debug lpmgrd dump idmgr type vsys-application name <value>
+debug lpmgrd dump idmgr type vsys-application all
+debug lpmgrd dump idmgr type security-rule id <1-4096>
+debug lpmgrd dump idmgr type security-rule name <value>
+debug lpmgrd dump idmgr type security-rule all
+debug lpmgrd dump idmgr type nat-rule id <1-4096>
+debug lpmgrd dump idmgr type nat-rule name <value>
+debug lpmgrd dump idmgr type nat-rule all
+debug lpmgrd dump idmgr type ssl-rule id <1-4096>
+debug lpmgrd dump idmgr type ssl-rule name <value>
+debug lpmgrd dump idmgr type ssl-rule all
+debug lpmgrd dump idmgr type ike-gateway id <1-4096>
+debug lpmgrd dump idmgr type ike-gateway name <value>
+debug lpmgrd dump idmgr type ike-gateway all
+debug lpmgrd dump idmgr type pbf-rule id <1-4096>
+debug lpmgrd dump idmgr type pbf-rule name <value>
+debug lpmgrd dump idmgr type pbf-rule all
+debug lpmgrd dump idmgr type shared-custom-url-category id <1-4294967295>
+debug lpmgrd dump idmgr type shared-custom-url-category name <value>
+debug lpmgrd dump idmgr type shared-custom-url-category all
+debug lpmgrd dump idmgr type vsys-custom-url-category id <1-4294967295>
+debug lpmgrd dump idmgr type vsys-custom-url-category name <value>
+debug lpmgrd dump idmgr type vsys-custom-url-category all
+debug lpmgrd dump idmgr type shared-gateway id <1-4096>
+debug lpmgrd dump idmgr type shared-gateway name <value>
+debug lpmgrd dump idmgr type shared-gateway all
+debug lpmgrd dump idmgr type shared-region id <1-1023>
+debug lpmgrd dump idmgr type shared-region name <value>
+debug lpmgrd dump idmgr type shared-region all
+debug lpmgrd dump idmgr type vsys-region id <1024-3071>
+debug lpmgrd dump idmgr type vsys-region name <value>
+debug lpmgrd dump idmgr type vsys-region all
+debug dataplane flush-log
+debug dataplane test url-resolve-path <value>
+debug dataplane test tunnel-tables
+debug dataplane test url-cache-resolve-path max-per-sec <1-65535>
+debug dataplane test nat-policy-add from <value> to <value> source <ip/netmask> destination <ip/netmask> protocol <1-255> source-port <1-65535> destination-port <1-65535> protocol <1-255>
+debug dataplane test nat-policy-del from <value> to <value> source <ip/netmask> translate-source <ip/netmask> destination <ip/netmask> protocol <1-255> source-port <1-65535> translate-source-port <1-65535> destination-port <1-65535> protocol <1-255>
+debug dataplane tasks stop
+debug dataplane tasks start
+debug dataplane nat sync-ippool rule <value>
+debug dataplane show url-cache statistics
+debug dataplane show dos rule debug dataplane show dos rule <name> classification-table
+debug dataplane show dos zone debug dataplane show dos zone <name> block-table
+debug dataplane show dos classification-table
+debug dataplane show dos block-table
+debug dataplane show com statistics
+debug dataplane show ctd regex-stats dump
+debug dataplane show ctd regex-group dump
+debug dataplane show ctd aggregate-table
+debug dataplane show ctd driveby-table
+debug dataplane show ctd sml-cache
+debug dataplane show ctd version
+debug dataplane show ctd threat id <0-0x0fffffff> cid <0-1024>
+debug dataplane show ctd athreat tid <0-0x0fffffff>
+debug dataplane show ctd pcap-cache
+debug dataplane show cfg-memstat statistics
+debug dataplane show username-cache
+debug dataplane reset logging
+debug dataplane reset pow
+debug dataplane reset appid cache
+debug dataplane reset appid statistics
+debug dataplane reset appid unknown-cache destination <ip/netmask>
+debug dataplane reset ssl-decrypt certificate-cache
+debug dataplane reset ssl-decrypt certificate-status
+debug dataplane reset ssl-decrypt exclude-cache server <value> application <ssl|ssh>
+debug dataplane reset ssl-decrypt notify-cache source <ip/netmask>
+debug dataplane reset ssl-decrypt session-cache
+debug dataplane reset ssl-decrypt hsm-request
+debug dataplane reset ctd regex-stats
+debug dataplane reset ctd url-block-cache lockout
+debug dataplane reset dos rule debug dataplane reset dos rule <name> classification-table
+debug dataplane reset dos zone debug dataplane reset dos zone <name> block-table source <ip/netmask>
+debug dataplane reset dos zone <name> block-table all
+debug dataplane reset dos classification-table
+debug dataplane reset dos block-table
+debug dataplane reset username-cache
+debug dataplane set pbf-no-return-mac-learning on
+debug dataplane set pbf-no-return-mac-learning off
+debug dataplane set pbf-no-return-mac-learning show
+debug dataplane packet-diag aggregate-logs strip_tags <yes|no>
+debug dataplane packet-diag set tag <1-65535>
+debug dataplane packet-diag set filter pre-parse-match <yes|no>
+debug dataplane packet-diag set filter on
+debug dataplane packet-diag set filter off
+debug dataplane packet-diag set filter index debug dataplane packet-diag set filter index <name> match ingress-interface <value> source <ip/netmask> destination <ip/netmask> source-port <1-65535> destination-port <1-65535> protocol <1-255> non-ip <exclude|include|only> ipv6-only <yes|no>
+debug dataplane packet-diag set filter match ingress-interface <value> source <ip/netmask> destination <ip/netmask> source-port <1-65535> destination-port <1-65535> protocol <1-255> non-ip <exclude|include|only> ipv6-only <yes|no>
+debug dataplane packet-diag set capture snaplen <40-65535>
+debug dataplane packet-diag set capture on
+debug dataplane packet-diag set capture off
+debug dataplane packet-diag set capture trigger application from <value> to <value> file <value> packet-count <1-1073741824> byte-count <1-1073741824>
+debug dataplane packet-diag set capture stage receive file <value> packet-count <1-1073741824> byte-count <1-1073741824>
+debug dataplane packet-diag set capture stage firewall file <value> packet-count <1-1073741824> byte-count <1-1073741824>
+debug dataplane packet-diag set capture stage drop file <value> packet-count <1-1073741824> byte-count <1-1073741824>
+debug dataplane packet-diag set capture stage transmit file <value> packet-count <1-1073741824> byte-count <1-1073741824>
+debug dataplane packet-diag set log counter <value>
+debug dataplane packet-diag set log on
+debug dataplane packet-diag set log off
+debug dataplane packet-diag set log log-option throttle <yes|no>
+debug dataplane packet-diag set log feature cfg <basic|config|agent|all>
+debug dataplane packet-diag set log feature tcp <reass|fptcp|all>
+debug dataplane packet-diag set log feature ssl <basic|all>
+debug dataplane packet-diag set log feature proxy <basic|all>
+debug dataplane packet-diag set log feature pow <basic|all>
+debug dataplane packet-diag set log feature zip <basic|all>
+debug dataplane packet-diag set log feature misc <misc|all>
+debug dataplane packet-diag set log feature module <aho|dfa|scan|url|all>
+debug dataplane packet-diag set log feature flow <basic|ager|ha|np|arp|nd|receive|log|track|netx|all>
+debug dataplane packet-diag set log feature tunnel <flow|ager>
+debug dataplane packet-diag set log feature ctd <basic|sml|url|detector|urlcat|error|all>
+debug dataplane packet-diag set log feature appid <agt|basic|policy|dfa|all>
+debug dataplane packet-diag set log feature url_trie <basic|stat|all>
+debug dataplane packet-diag set log feature all
+debug dataplane packet-diag clear filter <1-4>|<all>
+debug dataplane packet-diag clear all
+debug dataplane packet-diag clear capture trigger <global-counter|application>
+debug dataplane packet-diag clear capture stage <receive|firewall|drop|transmit>
+debug dataplane packet-diag clear capture all
+debug dataplane packet-diag clear capture snaplen
+debug dataplane packet-diag clear log counter <value>|<all>
+debug dataplane packet-diag clear log log
+debug dataplane packet-diag clear log feature cfg <basic|config|agent|all>
+debug dataplane packet-diag clear log feature tcp <reass|fptcp|all>
+debug dataplane packet-diag clear log feature ssl <basic|all>
+debug dataplane packet-diag clear log feature proxy <basic|all>
+debug dataplane packet-diag clear log feature pow <basic|all>
+debug dataplane packet-diag clear log feature zip <basic|all>
+debug dataplane packet-diag clear log feature misc <misc|all>
+debug dataplane packet-diag clear log feature module <aho|dfa|scan|url|all>
+debug dataplane packet-diag clear log feature flow <basic|ager|ha|np|arp|nd|receive|netx|all>
+debug dataplane packet-diag clear log feature tunnel <flow|ager>
+debug dataplane packet-diag clear log feature ctd <basic|sml|url|detector|urlcat|error|all>
+debug dataplane packet-diag clear log feature appid <agt|basic|policy|dfa|all>
+debug dataplane packet-diag clear log feature all
+debug dataplane packet-diag clear filter-marked-session id <1-2147483648>
+debug dataplane packet-diag clear filter-marked-session all
+debug dataplane packet-diag show setting
+debug dataplane packet-diag show tag
+debug dataplane packet-diag show filter-marked-session
+debug dataplane pool statistics
+debug dataplane pool check software <0-255>
+debug dataplane pool mem file <value> mode <value> start <value> size <1-2147483648>
+debug dataplane pow status
+debug dataplane pow performance all
+debug dataplane memory status
+debug dataplane tcp state
+debug dataplane internal pdt oct bootmem avail
+debug dataplane internal pdt oct bootmem named
+debug dataplane internal pdt oct csr rd reg <value>
+debug dataplane internal pdt oct fpa show
+debug dataplane internal pdt oct pip stats port <0-31>
+debug dataplane internal pdt oct pko debug port <0-31>
+debug dataplane internal pdt oct pko stats port <0-31>
+debug dataplane internal pdt oct pko stats all <yes|no>
+debug dataplane internal pdt oct pow debug all <yes|no>
+debug dataplane internal pdt nac aho dump instance <0-1> table <0-1>
+debug dataplane internal pdt nac dfa dump instance <0-1> table <0-1>
+debug dataplane internal pdt nac info instance <0-1>
+debug dataplane internal pdt nac stats instance <0-1>
+debug dataplane internal vif route <0-255>
+debug dataplane internal vif address
+debug dataplane internal vif link
+debug dataplane internal vif rule
+debug dataplane internal vif vr
+debug dataplane fpga set sw_aho <yes|no>
+debug dataplane fpga set sw_dfa <yes|no>
+debug dataplane fpga state
+debug dataplane flow-control enable port <1-24>
+debug dataplane flow-control disable port <1-24>
+debug dataplane process comm on dump
+debug dataplane process comm on debug
+debug dataplane process comm on info
+debug dataplane process comm on warn
+debug dataplane process comm on error
+debug dataplane process comm off
+debug dataplane process comm show
+debug dataplane process task on dump
+debug dataplane process task on debug
+debug dataplane process task on info
+debug dataplane process task on warn
+debug dataplane process task on error
+debug dataplane process task off
+debug dataplane process task show
+debug dataplane process mprelay on dump
+debug dataplane process mprelay on debug
+debug dataplane process mprelay on info
+debug dataplane process mprelay on warn
+debug dataplane process mprelay on error
+debug dataplane process mprelay off
+debug dataplane process mprelay show
+debug dataplane process ha-agent on dump
+debug dataplane process ha-agent on debug
+debug dataplane process ha-agent on info
+debug dataplane process ha-agent on warn
+debug dataplane process ha-agent on error
+debug dataplane process ha-agent off
+debug dataplane process ha-agent show
+debug dataplane task-heartbeat on
+debug dataplane task-heartbeat off
+debug dataplane task-heartbeat show
+debug dataplane monitor detail on
+debug dataplane monitor detail off
+debug dataplane monitor detail show
+debug sslmgr on error
+debug sslmgr on warn
+debug sslmgr on info
+debug sslmgr on debug
+debug sslmgr on dump
+debug sslmgr off
+debug sslmgr show setting
+debug sslmgr show ocsp-next-update-time
+debug sslmgr statistics
+debug sslmgr tar-all-crl
+debug sslmgr save ocsp
+debug sslmgr reset rsa-key
+debug sslmgr set ocsp-next-update-time <1-10080>
+debug sslmgr view crl <value>
+debug sslmgr view ocsp <value>|<all>
+debug sslmgr delete crl <value>|<all>
+debug sslmgr delete ocsp <value>|<all>
+debug log-receiver on normal
+debug log-receiver on debug
+debug log-receiver on dump
+debug log-receiver off
+debug log-receiver show
+debug log-receiver statistics
+debug log-receiver netflow statistics
+debug log-receiver netflow clear
+debug log-receiver fwd on
+debug log-receiver fwd off
+debug log-receiver fwd show
+debug log-receiver container-page timeout <1-86400>
+debug log-receiver container-page entries <4-65536>
+debug log-receiver container-page on
+debug log-receiver container-page off
+debug wildfire dp-status
+debug wildfire transition-file-list
+debug wildfire content-info
+debug wildfire file-digest sha256 <value>
+debug wildfire reset dp-receiver
+debug wildfire reset file-cache
+debug wildfire reset log-cache
+debug wildfire reset report-cache
+debug wildfire reset forwarding
+debug wildfire reset all
+debug wildfire file-cache disable
+debug wildfire file-cache enable
+debug wildfire server-selection disable
+debug wildfire server-selection enable
+debug wildfire cloud-info set cloud-type <wf-public|wf-app>
+debug wildfire cloud-info set add-file-type <value>
+debug wildfire cloud-info set delete-file-type <value>
+debug vardata-receiver on <normal|debug|dump>
+debug vardata-receiver set third-party <libcurl|all>
+debug vardata-receiver set all
+debug vardata-receiver unset third-party <libcurl|all>
+debug vardata-receiver unset all
+debug vardata-receiver off
+debug vardata-receiver show
+debug vardata-receiver statistics
+debug keymgr on warn
+debug keymgr on normal
+debug keymgr on debug
+debug keymgr on dump
+debug keymgr off
+debug keymgr show
+debug keymgr list-sa
+debug rasmgr on normal
+debug rasmgr on debug
+debug rasmgr on dump
+debug rasmgr off
+debug rasmgr show
+debug rasmgr statistics reset
+debug rasmgr statistics all
+debug satd on normal
+debug satd on debug
+debug satd on dump
+debug satd off
+debug satd show
+debug satd failed-refresh-timeout satellite name <value> portal-refresh-time <0-10> gateway-refresh-time <0-10>
+debug satd statistics reset
+debug satd statistics all
+debug satd dump certificate-pool global <active|alternate>
+debug satd dump certificate-pool satellite <value>
+debug ike global on normal
+debug ike global on debug
+debug ike global on dump
+debug ike global off
+debug ike global show
+debug ike pcap show
+debug ike pcap on
+debug ike pcap off
+debug ike pcap delete
+debug ike pcap view
+debug ike socket
+debug ike stat
+debug dhcpd global on error
+debug dhcpd global on warn
+debug dhcpd global on info
+debug dhcpd global on debug
+debug dhcpd global on dump
+debug dhcpd global off
+debug dhcpd global show
+debug dhcpd pcap show
+debug dhcpd pcap on virtualrouter <value>
+debug dhcpd pcap off
+debug dhcpd pcap delete
+debug dhcpd pcap view
+debug dhcpd show objects
+debug routing mib <value>
+debug routing list-mib
+debug routing fib flush
+debug routing fib stats
+debug routing ifmon
+debug routing mpf stats
+debug routing global on error
+debug routing global on info
+debug routing global on debug
+debug routing global on dump
+debug routing global off
+debug routing global show
+debug routing pcap show
+debug routing pcap bgp on virtualrouter <value>
+debug routing pcap bgp off
+debug routing pcap bgp delete
+debug routing pcap bgp view
+debug routing pcap igmp on virtualrouter <value>
+debug routing pcap igmp off
+debug routing pcap igmp delete
+debug routing pcap igmp view
+debug routing pcap ospf on virtualrouter <value>
+debug routing pcap ospf off
+debug routing pcap ospf delete
+debug routing pcap ospf view
+debug routing pcap ospfv3 on virtualrouter <value>
+debug routing pcap ospfv3 off
+debug routing pcap ospfv3 delete
+debug routing pcap ospfv3 view
+debug routing pcap pim on virtualrouter <value>
+debug routing pcap pim off
+debug routing pcap pim delete
+debug routing pcap pim view
+debug routing pcap rip on virtualrouter <value>
+debug routing pcap rip off
+debug routing pcap rip delete
+debug routing pcap rip view
+debug routing pcap all on virtualrouter <value>
+debug routing pcap all off
+debug routing pcap all delete
+debug routing pcap all view
+debug routing socket
+debug routing restart
+debug ssl-vpn global on error
+debug ssl-vpn global on info
+debug ssl-vpn global on debug
+debug ssl-vpn global on dump
+debug ssl-vpn global off
+debug ssl-vpn global show
+debug ssl-vpn socket
+debug global-protect portal interval <60-86400>
+debug global-protect portal on
+debug global-protect portal off
+debug l3svc on <dump|debug|info|warn|error>
+debug l3svc off
+debug l3svc clear
+debug l3svc reset user-cache <value>|<all>
+debug l3svc show user-cache
+debug l3svc pcap show
+debug l3svc pcap on
+debug l3svc pcap off
+debug l3svc pcap delete
+debug l3svc pcap view
+debug pppoed global on warn
+debug pppoed global on info
+debug pppoed global on debug
+debug pppoed global on dump
+debug pppoed global off
+debug pppoed global show
+debug pppoed pcap show
+debug pppoed pcap on virtualrouter <value>
+debug pppoed pcap off
+debug pppoed pcap delete
+debug pppoed pcap view
+debug pppoed show interface <value>|<all>
+debug dnsproxyd global on warn
+debug dnsproxyd global on info
+debug dnsproxyd global on debug
+debug dnsproxyd global on dump
+debug dnsproxyd global off
+debug dnsproxyd global show
+debug dnsproxyd show objects
+debug dnsproxyd show connections
+debug dnsproxyd show batches
+debug dnsproxyd show persistent
+debug cryptod global on warn
+debug cryptod global on info
+debug cryptod global on debug
+debug cryptod global on dump
+debug cryptod global off
+debug cryptod global show
+debug cryptod show counters
+debug cryptod show hsm-thread index <0-19>
+debug cryptod show hsm-thread all
+debug cryptod clear hsm-key-cache
+debug user-id on <error|warn|info|debug|dump>
+debug user-id log-ip-user-mapping <yes|no>
+debug user-id log-ip-tag-mapping <yes|no>
+debug user-id set agent <basic|conn|ntlm|group|sslvpn|detail|tsa|all>
+debug user-id set userid <basic|detail|servermonitor|probing|xmlapi|service|vmmonitor|mdm|syslog|all>
+debug user-id set ldap <basic|detail|all>
+debug user-id set base <config|ha|id|all>
+debug user-id set hip <basic|detail|ha|all>
+debug user-id set misc <misc|all>
+debug user-id set all
+debug user-id unset agent <basic|conn|ntlm|group|sslvpn|detail|tsa|all>
+debug user-id unset userid <basic|detail|servermonitor|probing|xmlapi|service|vmmonitor|mdm|syslog|all>
+debug user-id unset ldap <basic|detail|all>
+debug user-id unset base <config|ha|id|all>
+debug user-id unset hip <basic|detail|ha|all>
+debug user-id unset misc <misc|all>
+debug user-id unset all
+debug user-id off
+debug user-id get
+debug user-id clear group <value>|<all>
+debug user-id clear gm-srvc-query <value>|<all>
+debug user-id clear log
+debug user-id clear registered-ip ip <ip/netmask>
+debug user-id clear registered-ip vm-info-source <value>|<all>
+debug user-id clear registered-ip all
+debug user-id clear domain-map
+debug user-id agent debug user-id agent <name> on <error|warn|info|debug|verbose>
+debug user-id agent <name> receive <yes|no>
+debug user-id agent <name> off
+debug user-id agent <name> clear group-mapping <value>|<all>
+debug user-id agent <name> clear log
+debug user-id agent <name> status
+debug user-id agent <name> group-mapping debug user-id agent <name> group-mapping <name> group name <value>
+debug user-id agent <name> group-mapping <name> group list
+debug user-id refresh group-mapping group-mapping-name <value>
+debug user-id refresh group-mapping all
+debug user-id refresh group-mapping xmlapi-groups
+debug user-id refresh user-id agent <value>|<all> ip <ip/netmask>
+debug user-id refresh dp-uid-gid
+debug user-id reset group-mapping <value>|<all>
+debug user-id reset user-id-agent <value>|<all>
+debug user-id reset vm-info-source <value>|<all>
+debug user-id reset ts-agent <value>|<all>
+debug user-id reset server-monitor <value>|<all>
+debug user-id reset global-protect-mdm <value>|<all>
+debug user-id reset user-id-syslog-parse <value>|<all>
+debug user-id reset ntlm
+debug user-id reset captive-portal ip-address <ip/netmask>
+debug user-id reset user-id-manager type all
+debug user-id reset user-id-manager type user
+debug user-id reset user-id-manager type user-group
+debug user-id reset user-id-manager type computer
+debug user-id reset user-id-manager type gp-gateway
+debug user-id reset user-id-manager type hip-profile
+debug user-id reset user-id-manager type hip-object
+debug user-id reset com statistics
+debug user-id save hip-profile-database
+debug user-id test ntlm-login ip-address <ip/netmask> user <value>
+debug user-id test cp-login ip-address <ip/netmask> user <value>
+debug user-id test hip-profile-database size <1-65536>
+debug user-id test hip-report user <value> ip <ip/netmask> computer <value> copy <yes|no>
+debug user-id test registered-ip download-mode <incremental|full>
+debug user-id test registered-ip download
+debug user-id test registered-ip register ip-address <ip/netmask> tag <value> from-agent <yes|no> persistent <yes|no>
+debug user-id test registered-ip unregister ip-address <ip/netmask> tag <value>
+debug user-id test probing
+debug user-id test user-id-syslog-parse regex-identifier event-regex <value> username-regex <value> address-regex <value> log-string <value>
+debug user-id test user-id-syslog-parse field-identifier event-string <value> username-prefix <value> username-delimiter <value> address-prefix <value> address-delimiter <value> log-string <value>
+debug user-id dump memory <summary|detail>
+debug user-id dump hip-report user <value> ip <ip/netmask> computer <value>
+debug user-id dump hip-profile-database start-from <1-131072> ip <ip/netmask> show-logout <yes|no>
+debug user-id dump hip-mdm-cache start-from <1-131072> mobile-id <value>
+debug user-id dump ts-agent config
+debug user-id dump ts-agent user-ids
+debug user-id dump vm-monitored-objects ref-id <value>
+debug user-id dump vm-monitored-objects source-name <value>
+debug user-id dump vm-monitored-objects type <vm|host|resource-pool|data-center|folder|cluster|compute-resource|root>
+debug user-id dump vm-monitored-objects all
+debug user-id dump idmgr high-availability state
+debug user-id dump idmgr type user id <1-4294967295>
+debug user-id dump idmgr type user name <value>
+debug user-id dump idmgr type user all
+debug user-id dump idmgr type user-group id <1-4294967295>
+debug user-id dump idmgr type user-group name <value>
+debug user-id dump idmgr type user-group all
+debug user-id dump idmgr type computer id <1-4294967295>
+debug user-id dump idmgr type computer name <value>
+debug user-id dump idmgr type computer all
+debug user-id dump idmgr type gp-gateway id <1-4294967295>
+debug user-id dump idmgr type gp-gateway name <value>
+debug user-id dump idmgr type gp-gateway all
+debug user-id dump idmgr type hip-profile id <1-1024>
+debug user-id dump idmgr type hip-profile name <value>
+debug user-id dump idmgr type hip-profile all
+debug user-id dump idmgr type hip-object id <1-65535>
+debug user-id dump idmgr type hip-object name <value>
+debug user-id dump idmgr type hip-object all
+debug user-id dump objects-in-policy
+debug user-id dump log-stats
+debug user-id dump uid-req-stats
+debug user-id dump ntlm-stats
+debug user-id dump domain-map
+debug user-id dump ha
+debug user-id dump state
+debug user-id dump com statistics
+debug user-id dump probing-stats
+debug user-id dump xmlapi-stats
+debug user-id dump edir-user user <value>
+debug user-id dump edir-user all
+set data-access-password <value>
+set panorama <on|off>
+set management-server logging <on|off|import-start|import-end>
+set management-server unlock admin <value>
+set password
+set ssh-authentication public-key <value> public-key <value>
+set cli config-output-format <default|xml|set|json>
+set cli pager <on|off>
+set cli confirmation-prompt <on|off>
+set cli scripting-mode <on|off>
+set cli op-command-xml-output <on|off>
+set cli timeout idle <1-1440>|<never>
+set cli hide-ip
+set cli hide-user
+set cli terminal type <aaa|aaa+dec|aaa+rv|aaa+unk|aaa-18|aaa-18-rv|aaa-20|aaa-22|aaa-24|aaa-24-rv|aaa-26|aaa-28|aaa-30-ctxt|aaa-30-rv|aaa-30-rv-ctxt|aaa-30-s|aaa-30-s-rv|aaa-36|aaa-36-rv|aaa-40|aaa-40-rv|aaa-48|aaa-48-rv|aaa-60|aaa-60-dec-rv|aaa-60-rv|aaa-60-s|aaa-60-s-rv|aaa-db|aaa-rv-unk|aaa-s-ctxt|aaa-s-rv-ctxt|aas1901|abm80|abm85|abm85e|abm85h|abm85h-old|act4|act5|addrinfo|adds980|adm+sgr|adm11|adm1178|adm12|adm1a|adm2|adm20|adm21|adm22|adm3|adm31|adm31-old|adm36|adm3a|adm3a+|adm42|adm42-ns|adm5|aepro|aixterm|aixterm-m|aixterm-m-old|aj510|aj830|alto-h19|altos2|altos3|altos4|altos7|altos7pc|amiga|amiga-8bit|amiga-h|amiga-vnc|ampex175|ampex175-b|ampex210|ampex219|ampex219w|ampex232|ampex232w|ampex80|annarbor4080|ansi|ansi+arrows|ansi+csr|ansi+cup|ansi+erase|ansi+idc|ansi+idl|ansi+idl1|ansi+inittabs|ansi+local|ansi+local1|ansi+pp|ansi+rca|ansi+rep|ansi+sgr|ansi+sgrbold|ansi+sgrdim|ansi+sgrso|ansi+sgrul|ansi+tabs|ansi-color-2-emx|ansi-color-3-emx|ansi-emx|ansi-generic|ansi-m|ansi-mini|ansi-mr|ansi-mtabs|ansi-nt|ansi.sys|ansi.sys-old|ansi.sysk|ansi77|apollo|apollo_15P|apollo_19L|apollo_color|apple-80|apple-ae|apple-soroc|apple-uterm|apple-uterm-vb|apple-videx|apple-videx2|apple-videx3|apple-vm80|apple2e|apple2e-p|apple80p|appleII|appleIIgs|arm100|arm100-w|atari|att2300|att2350|att4410|att4410v1-w|att4415|att4415+nl|att4415-nl|att4415-rv|att4415-rv-nl|att4415-w|att4415-w-nl|att4415-w-rv|att4415-w-rv-n|att4418|att4418-w|att4420|att4424|att4424-1|att4424m|att4426|att500|att505|att505-24|att510a|att510d|att5310|att5410-w|att5410v1|att5420_2|att5420_2-w|att5425|att5425-nl|att5425-w|att5620|att5620-1|att5620-24|att5620-34|att5620-s|att605|att605-pc|att605-w|att610|att610-103k|att610-103k-w|att610-w|att615|att615-103k|att615-103k-w|att615-w|att620|att620-103k|att620-103k-w|att620-w|att630|att630-24|att6386|att700|att730|att730-24|att730-41|att7300|att730r|att730r-24|att730r-41|avatar|avatar0|avatar0+|avt|avt+s|avt-ns|avt-rv|avt-rv-ns|avt-w|avt-w-ns|avt-w-rv|avt-w-rv-ns|aws|awsc|bantam|basis|beacon|beehive|beehive3|beehive4|beterm|bg1.25|bg1.25nv|bg1.25rv|bg2.0|bg2.0rv|bitgraph|blit|bobcat|bq300|bq300-8|bq300-8-pc|bq300-8-pc-rv|bq300-8-pc-w|bq300-8-pc-w-rv|bq300-8rv|bq300-8w|bq300-pc|bq300-pc-rv|bq300-pc-w|bq300-pc-w-rv|bq300-rv|bq300-w|bq300-w-8rv|bq300-w-rv|bsdos-pc|bsdos-pc-m|bsdos-pc-nobold|bsdos-ppc|bsdos-sparc|c100|c100-rv|c108|c108-4p|c108-rv|c108-rv-4p|c108-w|ca22851|cad68-2|cad68-3|cbblit|cbunix|cci|cdc456|cdc721|cdc721-esc|cdc721ll|cdc752|cdc756|cg7900|cit101|cit101e|cit101e-132|cit101e-n|cit101e-n132|cit101e-rv|cit500|cit80|citoh|citoh-6lpi|citoh-8lpi|citoh-comp|citoh-elite|citoh-pica|citoh-prop|coco3|color_xterm|commodore|cons25|cons25-m|cons25l1|cons25l1-m|cons25r|cons25r-m|cons25w|cons30|cons30-m|cons43|cons43-m|cons50|cons50-m|cons50l1|cons50l1-m|cons50r|cons50r-m|cons60|cons60-m|cons60l1|cons60l1-m|cons60r|cons60r-m|contel300|contel301|cops10|crt|cs10|cs10-w|ct8500|ctrm|cyb110|cyb83|cygwin|cygwinB19|cygwinDBG|d132|d200|d210|d210-dg|d211|d211-7b|d211-dg|d216-dg|d216-unix|d216-unix-25|d217-unix|d217-unix-25|d220|d220-7b|d220-dg|d230c|d230c-dg|d400|d410|d410-7b|d410-7b-w|d410-dg|d410-w|d412-dg|d412-unix|d412-unix-25|d412-unix-s|d412-unix-sr|d412-unix-w|d413-unix|d413-unix-25|d413-unix-s|d413-unix-sr|d413-unix-w|d414-unix|d414-unix-25|d414-unix-s|d414-unix-sr|d414-unix-w|d430c-dg|d430c-dg-ccc|d430c-unix|d430c-unix-25|d430c-unix-25-ccc|d430c-unix-ccc|d430c-unix-s|d430c-unix-s-ccc|d430c-unix-sr|d430c-unix-sr-ccc|d430c-unix-w|d430c-unix-w-ccc|d470c|d470c-7b|d470c-dg|d555|d555-7b|d555-7b-w|d555-dg|d555-w|d577|d577-7b|d577-7b-w|d577-dg|d577-w|d578|d578-7b|d800|ddr|dec-vt100|dec-vt220|decansi|delta|dg+ccc|dg+color|dg+color8|dg+fixed|dg-generic|dg200|dg210|dg211|dg450|dg460-ansi|dg6053|dg6053-old|dgkeys+11|dgkeys+15|dgkeys+7b|dgkeys+8b|dgmode+color|dgmode+color8|dgunix+ccc|dgunix+fixed|diablo1620|diablo1620-m8|diablo1640|diablo1640-lm|diablo1740-lm|digilog|djgpp|djgpp203|djgpp204|dku7003|dku7003-dumb|dku7102-old|dku7202|dm1520|dm2500|dm3025|dm3045|dm80|dm80w|dmchat|dmterm|dp3360|dp8242|dt100|dt100w|dt110|dt80-sas|dtc300s|dtc382|dtterm|dumb|dw1|dw2|dw3|dw4|dwk|ecma+color|ecma+sgr|elks|elks-ansi|elks-glasstty|elks-vt52|emu|emu-220|emx-base|env230|ep40|ep48|ergo4000|esprit|esprit-am|Eterm|eterm|ex155|excel62|excel62-rv|excel62-w|f100|f100-rv|f110|f110-14|f110-14w|f110-w|f1720|f200|f200-w|f200vi|f200vi-w|falco|falco-p|fos|fox|gator|gator-52|gator-52t|gator-t|gigi|glasstty|gnome|gnome-rh62|gnome-rh72|gnome-rh80|gnome-rh90|go140|go140w|go225|graphos|graphos-30|gs6300|gsi|gt40|gt42|guru|guru+rv|guru+s|guru-24|guru-44|guru-44-s|guru-76|guru-76-lp|guru-76-s|guru-76-w|guru-76-w-s|guru-76-wm|guru-nctxt|guru-rv|guru-s|h19|h19-a|h19-bs|h19-g|h19-u|h19-us|h19k|ha8675|ha8686|hazel|hds200|hft-c|hft-c-old|hft-old|hirez100|hirez100-w|hmod1|hp+arrows|hp+color|hp+labels|hp+pfk+arrows|hp+pfk+cr|hp+pfk-cr|hp+printer|hp110|hp150|hp2|hp236|hp2382a|hp2392|hp2397a|hp2621|hp2621-48|hp2621-a|hp2621-ba|hp2621-fl|hp2621-k45|hp2621-nl|hp2621-nt|hp2621b|hp2621b-kx|hp2621b-kx-p|hp2621b-p|hp2621p|hp2621p-a|hp2622|hp2623|hp2624|hp2624-10p|hp2624b-10p-p|hp2624b-p|hp2626|hp2626-12|hp2626-12-s|hp2626-12x40|hp2626-ns|hp2626-s|hp2626-x40|hp2627a|hp2627a-rev|hp2627c|hp262x|hp2640a|hp2640b|hp2641a|hp2645|hp2648|hp300h|hp700-wy|hp70092|hp9837|hp9845|hp98550|hpansi|hpex|hpgeneric|hpsub|hpterm|hurd|hz1000|hz1420|hz1500|hz1510|hz1520|hz1520-noesc|hz1552|hz1552-rv|hz2000|i100|i400|ibcs2|ibm+16color|ibm+color|ibm-apl|ibm-pc|ibm-system1|ibm3101|ibm3151|ibm3161|ibm3161-C|ibm3162|ibm3164|ibm327x|ibm5081|ibm5081-c|ibm5151|ibm5154|ibm6153|ibm6153-40|ibm6153-90|ibm6154|ibm6155|ibm8503|ibm8512|ibm8514|ibm8514-c|ibmaed|ibmapa8c|ibmapa8c-c|ibmega|ibmega-c|ibmmono|ibmpc|ibmpc3|ibmpcx|ibmvga|ibmvga-c|icl6404|icl6404-w|ifmr|ims-ansi|ims950|ims950-b|ims950-rv|infoton|interix|interix-nti|intertube|intertube2|intext|intext2|iris-ansi|iris-ansi-ap|iris-color|jaixterm|jaixterm-m|kaypro|kermit|kermit-am|klone+acs|klone+color|klone+koi8acs|klone+sgr|klone+sgr-dumb|konsole|konsole-16color|konsole-base|konsole-linux|konsole-vt100|konsole-vt420pc|konsole-xf3x|konsole-xf4x|kt7|kt7ix|kterm|kterm-color|kvt|lft|linux|linux-basic|linux-c|linux-c-nc|linux-koi8|linux-koi8r|linux-lat|linux-m|linux-nic|linux-vt|lisa|lisaterm|lisaterm-w|liswb|ln03|ln03-w|lpr|luna|m2-nam|mac|mac-w|mach|mach-bold|mach-color|mai|masscomp|masscomp1|masscomp2|megatek|memhp|mgr|mgr-linux|mgr-sun|mgterm|microb|mime|mime-fb|mime-hb|mime2a|mime2a-s|mime314|mime3a|mime3ax|minitel1|minitel1b|minitel1b-80|minix|minix-old|minix-old-am|mlterm|mm340|modgraph|modgraph2|modgraph48|mono-emx|morphos|ms-vt-utf8|ms-vt100|ms-vt100+|ms-vt100-color|msk227|msk22714|msk227am|mt4520-rv|mt70|mterm|mterm-ansi|MtxOrb|MtxOrb162|MtxOrb204|mvterm|nansi.sys|nansi.sysk|ncr160vppp|ncr160vpwpp|ncr160vt100an|ncr160vt100pp|ncr160vt100wan|ncr160vt100wpp|ncr160vt200an|ncr160vt200pp|ncr160vt200wan|ncr160vt200wpp|ncr160vt300an|ncr160vt300pp|ncr160vt300wan|ncr160vt300wpp|ncr160wy50+pp|ncr160wy50+wpp|ncr160wy60pp|ncr160wy60wpp|ncr260intan|ncr260intpp|ncr260intwan|ncr260intwpp|ncr260vppp|ncr260vpwpp|ncr260vt100an|ncr260vt100pp|ncr260vt100wan|ncr260vt100wpp|ncr260vt200an|ncr260vt200pp|ncr260vt200wan|ncr260vt200wpp|ncr260vt300an|ncr260vt300pp|ncr260vt300wan|NCR260VT300WPP|ncr260wy325pp|ncr260wy325wpp|ncr260wy350pp|ncr260wy350wpp|ncr260wy50+pp|ncr260wy50+wpp|ncr260wy60pp|ncr260wy60wpp|ncr7900i|ncr7900iv|ncr7901|ncrvt100an|ncrvt100wan|ncsa|ncsa-m|ncsa-m-ns|ncsa-ns|ncsa-vt220|nec5520|newhp|newhpkeyboard|news-29|news-29-euc|news-29-sjis|news-33|news-33-euc|news-33-sjis|news-42|news-42-euc|news-42-sjis|news-old-unk|news-unk|news28|news29|next|nextshell|northstar|nsterm|nsterm+7|nsterm+acs|nsterm+c|nsterm+c41|nsterm+mac|nsterm+s|nsterm-7|nsterm-7-c|nsterm-acs|nsterm-c|nsterm-c-acs|nsterm-c-s|nsterm-c-s-7|nsterm-c-s-acs|nsterm-m|nsterm-m-7|nsterm-m-acs|nsterm-m-s|nsterm-m-s-7|nsterm-m-s-acs|nsterm-s|nsterm-s-7|nsterm-s-acs|nwp511|nwp512|nwp512-a|nwp512-o|nwp513|nwp513-a|nwp513-o|nwp517|nwp517-w|oblit|oc100|ofcons|oldpc3|oldsun|omron|opennt-100|opennt-100-nti|opennt-35|opennt-35-nti|opennt-35-w|opennt-50|opennt-50-nti|opennt-50-w|opennt-60|opennt-60-nti|opennt-60-w|opennt-w|opennt-w-vt|opus3n1+|origpc3|osborne|osborne-w|osexec|otek4112|otek4115|owl|p19|p8gl|pc-coherent|pc-minix|pc-venix|pc3|pc6300plus|pcansi|pcansi-25|pcansi-25-m|pcansi-33|pcansi-33-m|pcansi-43|pcansi-43-m|pcansi-m|pccons|pcix|pckermit|pckermit120|pcmw|pcplot|pcvt25|pcvt25-color|pcvt25w|pcvt28|pcvt28w|pcvt35|pcvt35w|pcvt40|pcvt40w|pcvt43|pcvt43w|pcvt50|pcvt50w|pcvtXX|pe1251|pe7000c|pe7000m|pilot|pmcons|prism12|prism12-m|prism12-m-w|prism12-w|prism14|prism14-m|prism14-m-w|prism14-w|prism2|prism4|prism5|prism7|prism8|prism8-w|prism9|prism9-8|prism9-8-w|prism9-w|pro350|ps300|psterm|psterm-80x24|psterm-90x28|psterm-96x48|psterm-fast|pt100|pt100w|pt210|pt250|pt250w|pty|putty|qansi|qansi-g|qansi-m|qansi-t|qansi-w|qdss|qnx|qnxm|qnxt|qnxt2|qnxtmono|qnxw|qume5|qvt101|qvt101+|qvt102|qvt103|qvt103-w|qvt119+|qvt119+-25|qvt119+-25-w|qvt119+-w|qvt203|qvt203-25|qvt203-25-w|qvt203-w|rbcomm|rbcomm-nam|rbcomm-w|rca|rcons|rcons-color|regent|regent100|regent20|regent25|regent40|regent40+|regent60|rt6221|rt6221-w|rtpc|rxvt|rxvt+pcfkeys|rxvt-16color|rxvt-basic|rxvt-color|rxvt-cygwin|rxvt-cygwin-native|rxvt-xpm|sb1|sb2|sbi|scanset|scoansi|scoansi-new|scoansi-old|screen|screen-bce|screen-s|screen-w|screen.linux|screen.teraterm|screen.xterm-r6|screen.xterm-xfree86|screen2|screen3|screwpoint|scrhp|sibo|simterm|soroc120|soroc140|st52|sun|sun-1|sun-12|sun-17|sun-24|sun-34|sun-48|sun-c|sun-cgsix|sun-e|sun-e-s|sun-il|sun-s|sun-type4|superbee-xsb|superbeeic|superbrain|swtp|synertek|t10|t1061|t1061f|t16|t3700|t3800|tab132|tab132-rv|tab132-w|tab132-w-rv|tandem6510|tandem653|tek|tek4013|tek4014|tek4014-sm|tek4015|tek4015-sm|tek4023|tek4024|tek4025-17|tek4025-17-ws|tek4025-cr|tek4025-ex|tek4025a|tek4025ex|tek4105|tek4105-30|tek4105a|tek4106brl|tek4107|tek4112|tek4112-5|tek4112-nd|tek4113|tek4113-34|tek4113-nd|tek4115|tek4125|tek4205|tek4207|tek4207-s|tek4404|teletec|teraterm|terminet1200|ti700|ti916|ti916-132|ti916-8|ti916-8-132|ti924|ti924-8|ti924-8w|ti924w|ti926|ti926-8|ti928|ti928-8|ti931|ti_ansi|trs16|trs2|ts100|ts100-ctxt|tt|tt505-22|tty33|tty37|tty40|tty43|tvi803|tvi9065|tvi910|tvi910+|tvi912|tvi912b|tvi912b+2p|tvi912b+dim|tvi912b+mc|tvi912b+printer|tvi912b+vb|tvi912b-2p|tvi912b-2p-mc|tvi912b-2p-p|tvi912b-2p-unk|tvi912b-mc|tvi912b-p|tvi912b-unk|tvi912b-vb|tvi912b-vb-mc|tvi912b-vb-p|tvi912b-vb-unk|tvi912cc|tvi920b|tvi920b+fn|tvi920b-2p|tvi920b-2p-mc|tvi920b-2p-p|tvi920b-2p-unk|tvi920b-mc|tvi920b-p|tvi920b-unk|tvi920b-vb|tvi920b-vb-mc|tvi920b-vb-p|tvi920b-vb-unk|tvi921|tvi924|tvi925|tvi925-hi|tvi92B|tvi92D|tvi950|tvi950-2p|tvi950-4p|tvi950-rv|tvi950-rv-2p|tvi950-rv-4p|tvi955|tvi955-hb|tvi955-w|tvi970|tvi970-2p|tvi970-vb|tvipt|tws-generic|tws2102-sna|tws2103|tws2103-sna|uniterm|unknown|uts30|uwin|v3220|v5410|vanilla|vc303|vc303a|vc404|vc404-s|vc414|vc415|versaterm|vi200|vi200-f|vi200-rv|vi300|vi300-old|vi50|vi500|vi50adm|vi55|vi550|vi603|viewpoint|vip|vip-H|vip-Hw|vip-w|visa50|vp3a+|vp60|vp90|vremote|vsc|vt100|vt100+fnkeys|vt100+keypad|vt100+pfkeys|vt100-nav|vt100-nav-w|vt100-putty|vt100-s|vt100-s-bot|vt100-vb|vt100-w|vt100-w-nam|vt100nam|vt102|vt102-nsgr|vt102-w|vt125|vt131|vt132|vt200-js|vt220|vt220+keypad|vt220-8bit|vt220-nam|vt220-old|vt220-w|vt220d|vt320|vt320-k3|vt320-k311|vt320-nam|vt320-w|vt320-w-nam|vt320nam|vt340|vt400|vt420|vt420f|vt420pc|vt420pcdos|vt50|vt50h|vt510|vt510pc|vt510pcdos|vt52|vt520|vt525|vt61|wsiris|wsvt25|wsvt25m|wy100|wy100q|wy120|wy120-25|wy120-25-w|wy120-vb|wy120-w|wy120-w-vb|wy160|wy160-25|wy160-25-w|wy160-42|wy160-42-w|wy160-43|wy160-43-w|wy160-tek|wy160-vb|wy160-w|wy160-w-vb|wy185|wy185-24|wy185-vb|wy185-w|wy185-wvb|wy30|wy30-mc|wy30-vb|wy325|wy325-25|wy325-25w|wy325-42|wy325-42w|wy325-42w-vb|wy325-43|wy325-43w|wy325-43w-vb|wy325-vb|wy325-w|wy325-w-vb|wy350|wy350-vb|wy350-w|wy350-wvb|wy370|wy370-105k|wy370-EPC|wy370-nk|wy370-rv|wy370-tek|wy370-vb|wy370-w|wy370-wvb|wy50|wy50-mc|wy50-vb|wy50-w|wy50-wvb|wy520|wy520-24|wy520-36|wy520-36pc|wy520-36w|wy520-36wpc|wy520-48|wy520-48pc|wy520-48w|wy520-48wpc|wy520-epc|wy520-epc-24|wy520-epc-vb|wy520-epc-w|wy520-epc-wvb|wy520-vb|wy520-w|wy520-wvb|wy60|wy60-25|wy60-25-w|wy60-42|wy60-42-w|wy60-43|wy60-43-w|wy60-vb|wy60-w|wy60-w-vb|wy75|wy75-mc|wy75-vb|wy75-w|wy75-wvb|wy75ap|wy85|wy85-8bit|wy85-vb|wy85-w|wy85-wvb|wy99-ansi|wy99a-ansi|wy99f|wy99fa|wy99gt|wy99gt-25|wy99gt-25-w|wy99gt-tek|wy99gt-vb|wy99gt-w|wy99gt-w-vb|wyse-vp|x10term|x68k|xerox1720|xerox820|xnuppc|xnuppc+100x37|xnuppc+112x37|xnuppc+128x40|xnuppc+128x48|xnuppc+144x48|xnuppc+160x64|xnuppc+200x64|xnuppc+200x75|xnuppc+256x96|xnuppc+80x25|xnuppc+80x30|xnuppc+90x30|xnuppc+b|xnuppc+basic|xnuppc+c|xnuppc+f|xnuppc+f2|xnuppc-100x37|xnuppc-100x37-m|xnuppc-112x37|xnuppc-112x37-m|xnuppc-128x40|xnuppc-128x40-m|xnuppc-128x48|xnuppc-128x48-m|xnuppc-144x48|xnuppc-144x48-m|xnuppc-160x64|xnuppc-160x64-m|xnuppc-200x64|xnuppc-200x64-m|xnuppc-200x75|xnuppc-200x75-m|xnuppc-256x96|xnuppc-256x96-m|xnuppc-80x25|xnuppc-80x25-m|xnuppc-80x30|xnuppc-80x30-m|xnuppc-90x30|xnuppc-90x30-m|xnuppc-b|xnuppc-f|xnuppc-f2|xnuppc-m|xnuppc-m-b|xnuppc-m-f|xnuppc-m-f2|xtalk|xterm|xterm+pcfkeys|xterm+sl|xterm+sl-twm|xterm-1002|xterm-1003|xterm-16color|xterm-24|xterm-256color|xterm-88color|xterm-8bit|xterm-basic|xterm-bold|xterm-color|xterm-hp|xterm-new|xterm-nic|xterm-noapp|xterm-pcolor|xterm-r5|xterm-r6|xterm-sco|xterm-sun|xterm-vt220|xterm-vt52|xterm-xf86-v32|xterm-xf86-v33|xterm-xf86-v333|xterm-xf86-v40|xterm-xf86-v43|xterm-xf86-v44|xterm-xfree86|xterm-xi|xterm1|xtermc|xtermm|xterms-sun|z100|z100bw|z29|z29a|z29a-kc-uc|z29a-nkc-bc|z29a-nkc-uc|z340|z340-nam|z39-a|zen30|zen50|ztx>
+set cli terminal width <1-500>
+set cli terminal height <1-500>
+set session timeout-tcp <1-15999999>
+set session timeout-udp <1-15999999>
+set session timeout-icmp <1-15999999>
+set session timeout-default <1-15999999>
+set session timeout-tcpinit <1-60>
+set session timeout-tcphandshake <1-60>
+set session timeout-tcpwait <1-600>
+set session timeout-captive-portal <1-15999999>
+set session timeout-scan <5-30>
+set session timeout-discard-tcp <1-15999999>
+set session timeout-discard-udp <1-15999999>
+set session timeout-discard-default <1-15999999>
+set session scan-threshold <50-99>
+set session scan-scaling-factor <2-16>
+set session accelerated-aging-enable <yes|no>
+set session accelerated-aging-threshold <50-99>
+set session accelerated-aging-scaling-factor <2-16>
+set session tcp-reject-non-syn <yes|no>
+set session offload <yes|no>
+set session strict-checksum <yes|no>
+set session resource-limit-behavior <bypass|drop>
+set session default
+set application dump-unknown <yes|no>
+set application cache <yes|no>
+set application supernode <yes|no>
+set application heuristics <yes|no>
+set application use-cache-for-identification <yes|no>
+set application notify-user <yes|no>
+set application dump on limit <1-5000> from <value> to <value> source <ip/netmask> destination <ip/netmask> source-user <value> destination-user <value> source-port <1-65535> destination-port <1-65535> protocol <1-255> application <value> rule <value>
+set application dump off
+set application traceroute enable <yes|no>
+set application traceroute ttl-threshold <0-255>
+set clock date <value> time <value>
+set system setting target-vsys <value>|<none>
+set system setting shared-policy <enable|disable|import-and-disable>
+set system setting template <enable|disable|import-and-disable>
+set system setting url-database <value>
+set system setting packet-descriptor-monitor enable yes
+set system setting packet-descriptor-monitor enable no
+set system setting mp-memory-monitor enable yes
+set system setting mp-memory-monitor enable no
+set system setting zip enable <yes|no>
+set system setting packet ip-frag-limit <yes|no>
+set system setting util assert-crash-once <yes|no>
+set system setting pow wqe-tag-check <yes|no>
+set system setting pow wqe-inuse-check <yes|no>
+set system setting pow wqe-swbuf-check <yes|no>
+set system setting pow wqe-swbuf-ref <yes|no>
+set system setting wildfire interval server-list-update-interval <5-10080>|<default>
+set system setting wildfire interval report-update-interval <60-3600>|<default>
+set system setting ctd x-forwarded-for <yes|no>
+set system setting ctd strip-x-fwd-for <yes|no>
+set system setting ctd regex-stats-on <yes|no>
+set system setting logging max-log-rate <0-50000>
+set system setting logging max-packet-rate <0-2560>
+set system setting logging log-suppression <yes|no>
+set system setting logging default-policy-logging <0-300>
+set system setting logging default
+set system setting ssl-decrypt skip-ssl-decrypt <yes|no>
+set system setting ssl-decrypt skip-ssl <yes|no>
+set system setting ssl-decrypt answer-timeout <1-86400>
+set system setting ssl-decrypt notify-user <yes|no>
+set system setting url-filtering-feature cache <True|False>
+set system setting url-filtering-feature filter <True|False>
+set user-id data <value>
+set global-protect redirect location <value>
+set global-protect redirect on
+set global-protect redirect off
+request acknowledge logid <value>
+request last-acknowledge-time
+request commit-lock add comment <value>
+request commit-lock remove admin <value>
+request config-lock add comment <value>
+request config-lock remove
+request password-hash password <value> username <value>
+request password-change-history re-encrypt old-master-key <value> master-key <value>
+request password-change-history dump-history master-key <value>
+request master-key new-master-key <value> current-master-key <value> lifetime <1-17520> reminder <1-8760> on-hsm <yes|no>
+request hsm server-enroll <value>
+request hsm authenticate server <value> password <value>
+request hsm login password <value>
+request hsm ha create-ha-group password <value>
+request hsm ha synchronize password <value>
+request hsm ha replace-server password <value>
+request hsm ha recover
+request hsm support-info
+request hsm rfs-setup
+request hsm rfs-sync
+request hsm reset
+request hsm mkey-wrapping-key-rotation
+request tech-support dump
+request stats dump
+request quota-enforcement
+request high-availability sync-to-remote candidate-config
+request high-availability sync-to-remote running-config
+request high-availability sync-to-remote clock
+request high-availability sync-to-remote id-manager base
+request high-availability sync-to-remote id-manager user-id
+request high-availability state suspend
+request high-availability state functional
+request shutdown system
+request restart system
+request system private-data-reset
+request system self-test crypto
+request system self-test software-integrity
+request system self-test force-crypto-failure mp <value>
+request system self-test force-crypto-failure dp <value>
+request system self-test-job crypto
+request system self-test-job software-integrity
+request system software info
+request system software check
+request system software download sync-to-peer <yes|no> version <value>
+request system software download sync-to-peer <yes|no> file <value>
+request system software install load-config <value> version <value>
+request system software install load-config <value> file <value>
+request system fqdn show
+request system fqdn refresh force <yes|no>
+request system external-list url-test <value>
+request system external-list show name <value>
+request system external-list refresh name <value>
+request global-protect-client software info
+request global-protect-client software check
+request global-protect-client software download sync-to-peer <yes|no> version <value>
+request global-protect-client software download sync-to-peer <yes|no> file <value>
+request global-protect-client software activate version <value>
+request global-protect-client software activate file <value>
+request url-filtering save url-database
+request url-filtering install signed-database
+request url-filtering install database major-version <1-65535> minor-version <0-65535> md5 <value>
+request url-filtering update url <value>
+request url-filtering upgrade brightcloud test
+request url-filtering download status vendor <paloaltonetworks|brightcloud>
+request url-filtering download paloaltonetworks region <value>
+request url-filtering revert
+request data-filtering access-password create password <value>
+request data-filtering access-password modify old-password <value> new-password <value>
+request data-filtering access-password delete
+request content downgrade install <value>
+request content upgrade info
+request content upgrade check
+request content upgrade download latest sync-to-peer <yes|no>
+request content upgrade install commit <yes|no> sync-to-peer <yes|no> version <latest>
+request content upgrade install commit <yes|no> sync-to-peer <yes|no> file <value>
+request anti-virus downgrade install <value>
+request anti-virus upgrade info
+request anti-virus upgrade check
+request anti-virus upgrade download latest sync-to-peer <yes|no>
+request anti-virus upgrade install commit <yes|no> sync-to-peer <yes|no> version <latest>
+request anti-virus upgrade install commit <yes|no> sync-to-peer <yes|no> file <value>
+request wildfire registration
+request wildfire downgrade install <value>
+request wildfire upgrade info
+request wildfire upgrade check
+request wildfire upgrade download latest sync-to-peer <yes|no>
+request wildfire upgrade install commit <yes|no> sync-to-peer <yes|no> version <latest>
+request wildfire upgrade install commit <yes|no> sync-to-peer <yes|no> file <value>
+request license install <value>
+request license info
+request license fetch auth-code <value>
+request support info
+request support check
+request device-registration username <value> password <value>
+request certificate generate certificate-name <value> name <value> nbits <value> digest <value> country-code <value> state <value> locality <value> organization <value> email <value> filename <value> ca <yes|no> signed-by <value>|<external> ocsp-responder-url <value> days-till-expiry <1-7300> organization-unit  [ <organization-unit1> <organization-unit2>... ]
+request certificate generate certificate-name <value> name <value> nbits <value> digest <value> country-code <value> state <value> locality <value> organization <value> email <value> filename <value> ca <yes|no> signed-by <value>|<external> ocsp-responder-url <value> days-till-expiry <1-7300> hostname  [ <hostname1> <hostname2>... ]
+request certificate generate certificate-name <value> name <value> nbits <value> digest <value> country-code <value> state <value> locality <value> organization <value> email <value> filename <value> ca <yes|no> signed-by <value>|<external> ocsp-responder-url <value> days-till-expiry <1-7300> ip  [ <ip1> <ip2>... ]
+request certificate generate certificate-name <value> name <value> nbits <value> digest <value> country-code <value> state <value> locality <value> organization <value> email <value> filename <value> ca <yes|no> signed-by <value>|<external> ocsp-responder-url <value> days-till-expiry <1-7300> alt-email  [ <alt-email1> <alt-email2>... ]
+request certificate renew certificate-name <value> days-till-expiry <1-7300>
+request certificate revoke certificate-name <value>
+request certificate revoke sslmgr-store db-serialno <value>
+request global-protect-gateway client-logout gateway <value> domain <value> computer <value> user <value> reason <force-logout>
+request global-protect-gateway unlock vsys <value> auth-profile <value> user <value> is-seq <yes|no>
+request global-protect-gateway satellite-logout gateway <value> serialno <value> reason <force-logout>
+request global-protect-portal ticket portal <value> request <value> duration <0-65535>
+request global-protect-satellite get-portal-config satellite <value> username <value> password <value>
+request global-protect-satellite get-gateway-config satellite <value> gateway-address <value>
+request dhcp client renew <value>|<vlan|all>
+request dhcp client release <value>|<vlan|all>
+test tag-filter <value>
+test url <value>
+test url-info-host <value>
+test url-info-cloud <value>
+test arp gratuitous interface <value> ip <ip/netmask>
+test nd router-advertisement interface <value>
+test custom-url url <value> rule <value>
+test security-policy-match from <value>|<any> to <value>|<any|multicast> source <ip/netmask> destination <ip/netmask> destination-port <1-65535> source-user <value> protocol <1-255> show-all <yes|no> application <value> category <value>
+test qos-policy-match from <value>|<any> to <value>|<any|multicast> source <ip/netmask> destination <ip/netmask> destination-port <1-65535> source-user <value> protocol <1-255> application <value> category <value>
+test cp-policy-match from <value>|<any> to <value>|<any> source <ip/netmask> destination <ip/netmask> category <value>
+test decryption-policy-match from <value>|<any> to <value>|<any> source <ip/netmask> destination <ip/netmask> category <value> application <value>
+test nat-policy-match from <value>|<any> to <value>|<any> source <ip/netmask> destination <ip/netmask> source-port <1-65535> destination-port <1-65535> protocol <1-255> to-interface <value> ha-device-id <0-1>
+test pbf-policy-match from <value> from-interface <value> source <ip/netmask> destination <ip/netmask> destination-port <1-65535> source-user <value> protocol <1-255> application <value> ha-device-id <0-1>
+test dos-policy-match from <value> to <value>|<multicast> from-interface <value> to-interface <value> source <ip/netmask> destination <ip/netmask> destination-port <1-65535> source-user <value> protocol <1-255>
+test vpn ike-sa gateway <value>
+test vpn ipsec-sa tunnel <value>
+test routing fib-lookup ip <ip/netmask> virtual-router <value>
+test routing mfib-lookup group <ip/netmask> source <ip/netmask> virtual-router <value>
+test routing bgp virtual-router test routing bgp virtual-router <name> refresh peer <value>
+test routing bgp virtual-router <name> restart peer <value>
+test routing bgp virtual-router <name> restart self
+test stats-service
+test botnet domain <value>
+test data-filtering pattern <value>
+test data-filtering ccn <value>
+test data-filtering ssn <value>
+test pppoe interface <value>
+test dns-proxy query name test dns-proxy query name <name> source <ip/netmask> domain-name <value>
+test dns-proxy query name <name> source <ip/netmask> ip <ip/netmask>
+test wildfire registration
+test scp-server-connection initiate hostname <value> port <1-65535> path <value> username <value> password <value>
+test scp-server-connection confirm hostname <value> key <value>
+test global-protect-satellite gateway-reconnect satellite <value> gateway-address <value> method <registration|activation>
+test global-protect-satellite gateway-connect satellite <value> gateway-address <value> method <registration|activation>
+test global-protect-satellite gateway-disconnect satellite <value> gateway-address <value> method <registration|activation>
+test global-protect-mdm hipreport request mobile-id <value> jailbroken <yes|no>
+test user-id user-id-syslog-parse regex-identifier event-regex <value> username-regex <value> address-regex <value> log-string <value>
+test user-id user-id-syslog-parse field-identifier event-string <value> username-prefix <value> username-delimiter <value> address-prefix <value> address-delimiter <value> log-string <value>
+scp import configuration from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import ui-translation-mapping from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import certificate from <value> remote-port <1-65535> source-ip <ip/netmask> certificate-name <value> passphrase <value> format <pkcs12|pem>
+scp import private-key from <value> remote-port <1-65535> source-ip <ip/netmask> passphrase <value> certificate-name <value> format <pkcs12|pem>
+scp import keypair from <value> remote-port <1-65535> source-ip <ip/netmask> passphrase <value> certificate-name <value> format <pkcs12|pem>
+scp import logdb from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import license from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import software from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import high-availability-key from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import ssl-optout-text from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import ssl-cert-status-page from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import captive-portal-text from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import url-coach-text from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import application-block-page from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import safe-search-block-page from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import url-block-page from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import file-block-continue-page from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import file-block-page from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import virus-block-page from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import global-protect-portal-custom-login-page profile <value> from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import global-protect-portal-custom-help-page profile <value> from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import global-protect-portal-custom-welcome-page profile <value> from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import content from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import anti-virus from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import wildfire from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import device-state from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import url-database from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import signed-url-database from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp import global-protect-client from <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export mgmt-pcap from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export threat-pcap pcap-id <value> search-time <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export ui-translation-mapping from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export certificate to <value> remote-port <1-65535> source-ip <ip/netmask> certificate-name <value> passphrase <value> include-key <yes|no> format <pem|pkcs12|pkcs10>
+scp export device-state to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export pan-url-db to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export crl from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export filter-pcap from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export application-pcap from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export inbound-proxy-key from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export stats-dump to <value> remote-port <1-65535> source-ip <ip/netmask> start-time equal <value>
+scp export stats-dump to <value> remote-port <1-65535> source-ip <ip/netmask> end-time equal <value>
+scp export core-file management-plane from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export log-file management-plane to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export configuration from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export pdf-reports from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export web-interface-certificate to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export logdb to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export tech-support to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export log traffic max-log-count <0-1048576> query <value> to <value> remote-port <1-65535> source-ip <ip/netmask> start-time equal <value>
+scp export log traffic max-log-count <0-1048576> query <value> to <value> remote-port <1-65535> source-ip <ip/netmask> end-time equal <value>
+scp export log threat max-log-count <0-1048576> query <value> to <value> remote-port <1-65535> source-ip <ip/netmask> start-time equal <value>
+scp export log threat max-log-count <0-1048576> query <value> to <value> remote-port <1-65535> source-ip <ip/netmask> end-time equal <value>
+scp export log url max-log-count <0-1048576> query <value> to <value> remote-port <1-65535> source-ip <ip/netmask> start-time equal <value>
+scp export log url max-log-count <0-1048576> query <value> to <value> remote-port <1-65535> source-ip <ip/netmask> end-time equal <value>
+scp export log data max-log-count <0-1048576> query <value> to <value> remote-port <1-65535> source-ip <ip/netmask> start-time equal <value>
+scp export log data max-log-count <0-1048576> query <value> to <value> remote-port <1-65535> source-ip <ip/netmask> end-time equal <value>
+scp export log wildfire max-log-count <0-1048576> query <value> to <value> remote-port <1-65535> source-ip <ip/netmask> start-time equal <value>
+scp export log wildfire max-log-count <0-1048576> query <value> to <value> remote-port <1-65535> source-ip <ip/netmask> end-time equal <value>
+scp export log system max-log-count <0-1048576> query <value> to <value> remote-port <1-65535> source-ip <ip/netmask> start-time equal <value>
+scp export log system max-log-count <0-1048576> query <value> to <value> remote-port <1-65535> source-ip <ip/netmask> end-time equal <value>
+scp export log config max-log-count <0-1048576> query <value> to <value> remote-port <1-65535> source-ip <ip/netmask> start-time equal <value>
+scp export log config max-log-count <0-1048576> query <value> to <value> remote-port <1-65535> source-ip <ip/netmask> end-time equal <value>
+scp export log alarm max-log-count <0-1048576> query <value> to <value> remote-port <1-65535> source-ip <ip/netmask> start-time equal <value>
+scp export log alarm max-log-count <0-1048576> query <value> to <value> remote-port <1-65535> source-ip <ip/netmask> end-time equal <value>
+scp export ssl-optout-text to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export global-protect-portal-custom-login-page name <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export global-protect-portal-custom-help-page name <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export global-protect-portal-custom-welcome-page name <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export ssl-cert-status-page to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export high-availability-key from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export captive-portal-text to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export url-coach-text to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export file-block-continue-page to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export file-block-page to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export application-block-page to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export url-block-page to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export virus-block-page to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export debug-pcap from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export hsm-support-info from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+scp export ike-config-file from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import anti-virus from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import wildfire from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import device-state from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import content from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import url-database from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import signed-url-database from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import global-protect-client from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import configuration from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import certificate from <value> file <value> remote-port <1-65535> source-ip <ip/netmask> certificate-name <value> passphrase <value> format <pkcs12|pem>
+tftp import private-key from <value> file <value> remote-port <1-65535> source-ip <ip/netmask> passphrase <value> certificate-name <value> format <pkcs12|pem>
+tftp import keypair from <value> file <value> remote-port <1-65535> source-ip <ip/netmask> passphrase <value> certificate-name <value> format <pkcs12|pem>
+tftp import license from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import software from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import ssl-optout-text from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import ssl-cert-status-page from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import high-availability-key from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import captive-portal-text from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import url-coach-text from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import file-block-continue-page from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import file-block-page from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import application-block-page from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import safe-search-block-page from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import url-block-page from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import virus-block-page from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import global-protect-portal-custom-login-page profile <value> from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import global-protect-portal-custom-help-page profile <value> from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp import global-protect-portal-custom-welcome-page profile <value> from <value> file <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export device-state to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export crl from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export filter-pcap from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export application-pcap from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export stats-dump to <value> remote-port <1-65535> source-ip <ip/netmask> start-time equal <value>
+tftp export stats-dump to <value> remote-port <1-65535> source-ip <ip/netmask> end-time equal <value>
+tftp export core-file management-plane from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export threat-pcap pcap-id <value> search-time <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export mgmt-pcap from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export configuration from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export web-interface-certificate to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export tech-support to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export log-file management-plane to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export ssl-optout-text to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export ssl-cert-status-page to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export high-availability-key from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export captive-portal-text to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export url-coach-text to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export file-block-continue-page to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export file-block-page to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export application-block-page to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export url-block-page to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export virus-block-page to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export global-protect-portal-custom-login-page name <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export global-protect-portal-custom-help-page name <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export global-protect-portal-custom-welcome-page name <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export debug-pcap from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+tftp export inbound-proxy-key from <value> to <value> remote-port <1-65535> source-ip <ip/netmask>
+ftp export log traffic query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> passive-mode equal <yes|no>
+ftp export log traffic query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> start-time equal <value>
+ftp export log traffic query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> end-time equal <value>
+ftp export log threat query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> passive-mode equal <yes|no>
+ftp export log threat query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> start-time equal <value>
+ftp export log threat query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> end-time equal <value>
+ftp export log data query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> passive-mode equal <yes|no>
+ftp export log data query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> start-time equal <value>
+ftp export log data query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> end-time equal <value>
+ftp export log url query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> passive-mode equal <yes|no>
+ftp export log url query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> start-time equal <value>
+ftp export log url query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> end-time equal <value>
+ftp export log wildfire query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> passive-mode equal <yes|no>
+ftp export log wildfire query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> start-time equal <value>
+ftp export log wildfire query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> end-time equal <value>
+ftp export log system query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> passive-mode equal <yes|no>
+ftp export log system query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> start-time equal <value>
+ftp export log system query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> end-time equal <value>
+ftp export log config query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> passive-mode equal <yes|no>
+ftp export log config query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> start-time equal <value>
+ftp export log config query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> end-time equal <value>
+ftp export log alarm query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> passive-mode equal <yes|no>
+ftp export log alarm query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> start-time equal <value>
+ftp export log alarm query <value> max-log-count <0-1048576> to <value> remote-port <1-65535> end-time equal <value>
+less mp-log <value>
+less mp-global <value>
+less mp-backtrace <value>
+less webserver-log <value>
+less custom-page <value>
+less agent-log <value>
+ls long-format <yes|no> sort-by-time <yes|no> reverse-order <yes|no> mp-log <value>
+ls long-format <yes|no> sort-by-time <yes|no> reverse-order <yes|no> mp-global <value>
+ls long-format <yes|no> sort-by-time <yes|no> reverse-order <yes|no> mp-backtrace <value>
+ls long-format <yes|no> sort-by-time <yes|no> reverse-order <yes|no> webserver-log <value>
+ls long-format <yes|no> sort-by-time <yes|no> reverse-order <yes|no> custom-page <value>
+ls long-format <yes|no> sort-by-time <yes|no> reverse-order <yes|no> global <value>
+ls long-format <yes|no> sort-by-time <yes|no> reverse-order <yes|no> content <value>
+grep invert-match <yes|no> line-number <yes|no> ignore-case <yes|no> no-filename <yes|no> count <yes|no> max-count <1-65535> context <1-65535> before-context <1-65535> after-context <1-65535> pattern <value> mp-log <value>
+ping bypass-routing <yes|no> count <1-2000000000> do-not-fragment <yes|no> inet6 <yes|no> interval <1-2000000000> source <value> no-resolve <yes|no> pattern <value> size <0-65468> tos <1-255> ttl <1-255> verbose <yes|no> host <value>
+netstat route <yes|no> interfaces <yes|no> groups <yes|no> statistics <yes|no> verbose <yes|no> numeric <yes|no> numeric-hosts <yes|no> numeric-ports <yes|no> numeric-users <yes|no> symbolic <yes|no> extend <yes|no> programs <yes|no> continuous <yes|no> listening <yes|no> all <yes|no> timers <yes|no> fib <yes|no> cache <yes|no>
+traceroute ipv4 <yes|no> ipv6 <yes|no> first-ttl <1-255> max-ttl <1-255> port <1-65535> tos <1-255> wait <1-99999> pause <1-2000000000> do-not-fragment <yes|no> debug-socket <yes|no> gateway <ip/netmask> no-resolve <yes|no> bypass-routing <yes|no> source <value> host <value>
+ssh inet <yes|no> port <0-65535> source <value> v1 <yes|no> v2 <yes|no> host <value>
+tail follow <yes|no> lines <1-65535> mp-log <value>
+tail follow <yes|no> lines <1-65535> agent-log <value>
+tail follow <yes|no> lines <1-65535> webserver-log <value>
+view-pcap follow <yes|no> link-header <yes|no> no-dns-lookup <yes|no> no-port-lookup <yes|no> no-qualification <yes|no> absolute-seq <yes|no> no-timestamp <yes|no> unformatted-timestamp <yes|no> delta <yes|no> timestamp <yes|no> undecoded-NFS <yes|no> verbose <yes|no> verbose+ <yes|no> verbose++ <yes|no> hex <yes|no> hex-link <yes|no> hex-ascii <yes|no> hex-ascii-link <yes|no> application-pcap <value>
+view-pcap follow <yes|no> link-header <yes|no> no-dns-lookup <yes|no> no-port-lookup <yes|no> no-qualification <yes|no> absolute-seq <yes|no> no-timestamp <yes|no> unformatted-timestamp <yes|no> delta <yes|no> timestamp <yes|no> undecoded-NFS <yes|no> verbose <yes|no> verbose+ <yes|no> verbose++ <yes|no> hex <yes|no> hex-link <yes|no> hex-ascii <yes|no> hex-ascii-link <yes|no> filter-pcap <value>
+view-pcap follow <yes|no> link-header <yes|no> no-dns-lookup <yes|no> no-port-lookup <yes|no> no-qualification <yes|no> absolute-seq <yes|no> no-timestamp <yes|no> unformatted-timestamp <yes|no> delta <yes|no> timestamp <yes|no> undecoded-NFS <yes|no> verbose <yes|no> verbose+ <yes|no> verbose++ <yes|no> hex <yes|no> hex-link <yes|no> hex-ascii <yes|no> hex-ascii-link <yes|no> debug-pcap <value>
+view-pcap follow <yes|no> link-header <yes|no> no-dns-lookup <yes|no> no-port-lookup <yes|no> no-qualification <yes|no> absolute-seq <yes|no> no-timestamp <yes|no> unformatted-timestamp <yes|no> delta <yes|no> timestamp <yes|no> undecoded-NFS <yes|no> verbose <yes|no> verbose+ <yes|no> verbose++ <yes|no> hex <yes|no> hex-link <yes|no> hex-ascii <yes|no> hex-ascii-link <yes|no> mgmt-pcap <value>
+view-pcap follow <yes|no> link-header <yes|no> no-dns-lookup <yes|no> no-port-lookup <yes|no> no-qualification <yes|no> absolute-seq <yes|no> no-timestamp <yes|no> unformatted-timestamp <yes|no> delta <yes|no> timestamp <yes|no> undecoded-NFS <yes|no> verbose <yes|no> verbose+ <yes|no> verbose++ <yes|no> hex <yes|no> hex-link <yes|no> hex-ascii <yes|no> hex-ascii-link <yes|no> threat threat-pcap-id <value> search-time <value>
+tcpdump snaplen <0-65535> filter <value>
+find command keyword <value>
+jcox@PA-VM-300>
