@@ -1,0 +1,3 @@
+#! /bin/bash
+dbloc='/Users/jcox/src/pan-fck/commands.txt'
+grep $1 $dbloc

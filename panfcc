@@ -1,3 +1,0 @@
-#! /bin/bash
-dbloc='/Users/jcox/src/command-find/commands.txt'
-grep $1 $dbloc
